@@ -1,0 +1,195 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[pdflang={en-GB}]{hyperref}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+
+% fontawesome
+\usepackage{fontawesome}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+
+\renewcommand{\familydefault}{\sfdefault}
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+        \textit{\small#1} & {\color{dark-grey}\small #2}\vspace{2pt} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+\begin{document}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------HEADING----------
+\begin{center}
+
+    \textbf{\Huge Michael Kennedy} \\ \vspace{5pt}
+    \small \faPhone \hspace{2pt} 831.917.9737 \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:michaelkennedyns5@gmail.com}{michael@michaelkennedy.dev} \hspace{1pt} $|$ 
+    \hspace{1pt} \faLinkedinSquare \hspace{2pt} \href{https://www.linkedin.com/in/mw-kennedy}{linkedin.com/in/mw-kennedy} \hspace{1pt}$|$
+    \hspace{1pt} \faGithubSquare \hspace{2pt} \href{https://github.com/xNS5}{github.com/xNS5}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{TECHNICAL SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+    \textbf{General Experience} {: Data Structures, Algorithms, Databases, Git, JIRA, Trello, Kanban.}\\
+     \textbf{Languages} {: Java, C, C\#, Flutter (Dart), Python, JavaScript (VueJS, SailsJS), HTML/CSS, Bash, PowerShell.}\vspace{2pt} \\
+     \textbf{Operating Systems}{: MacOS, Windows, Linux, Android.}
+    }}
+ \end{itemize}
+ 
+ %-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Western Washington University (WWU)}{December 2021}
+      {Bachelor of Science in Computer Science, Minor in Communication Studies}{Bellingham, WA}
+      
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Viking Union (VU), Western Washington University}{June 2019 -- December 2021}
+      {Computer Maintenance Technician}{Bellingham, WA}
+      \resumeItemListStart
+        \resumeItem{Acted as the sole on-site technician providing in-person and remote support during COVID-19 lockdown.}
+        \resumeItem{Deployed software and hardware to machines and over 50 offices located throughout the Viking Union.}
+        \resumeItem{Replaced the 3tb shared network drive used by over 200 VU employees with a new 100tb Synology NAS Device.}
+        \resumeItem{Researched, tested, and deployed a single-application kiosk to the VU information desk using Windows 10, PowerShell, Internet Explorer 11, and local group policy configuration.}
+        \resumeItem{Created Bash shell scripts to automate the wiping and reformatting of recovered USB drives in the VU’s lost and found.}
+        \resumeItem{Developed and tested Bash shell scripts to gather hardware and software information on the 20 iMac computers under my team's auspice.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Residential Technology Services (ResTek), Western Washington University}{September 2016 - October 2016}
+      {Helpdesk Intern}{Bellingham, WA}
+      \resumeItemListStart
+        \resumeItem{Selected as one of eight interns to provide technical support for new students in the dorms around campus. }
+        \resumeItem{Worked independently to help students over 40 students register laptop computers and cell phones with the campus Wi-Fi database, program TVs, and troubleshooted technical issues.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+      {\textbf{WWU Accessibility Engine} -- SailsJS, VueJS, Selenium, Python, Deque aXe API}{January 2021 -- Present}
+          \resumeItemListStart
+            \resumeItem{Led a team of 4 in the development of a full-stack accessibility checking application for Wandke Consulting -- an accessibility consulting company in Bellingham, WA.}
+            \resumeItem{Utilized Deque Labs’ aXe accessibility API and Selenium Webdriver to scan websites and test for over 350 Web Content Accessibility Guideline (WCAG) violations.}
+            \resumeItem{Set up API routes in the Sails.js backend and integrated a custom Python web crawler.}
+          \resumeItemListEnd
+          
+        \resumeProjectHeading
+          {\textbf{ReLeave} -- Flutter, SQLite}{January 2021 - March 2021}  
+          \resumeItemListStart
+            \resumeItem{Led a team of 4 in the development of a cross-platform mobile application to assist people going through cannabis use disorder recovery.}
+            \resumeItem{Conducted research, and interviewed Substance Use Disorder specialists with Sea-Mar Community Health Centers to develop a list of functional requirements.}
+            \resumeItem{Integrated Reddit API using the Dart Reddit API Wrapper (DRAW) to interact with over 200,000 users on the /r/Leaves subreddit.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\end{document}
