@@ -11,9 +11,14 @@ jobs:
         with:
           root_file: MichaelKennedy_Resume.tex
         
-      - name: Return Artifact
-        uses: actions/upload-artifact@v2
-          with:
-            name: PDF
-            path: ./MichaelKennedy_Resume.pdf
+    steps:
+      - uses: actions/checkout@v2
 
+      - uses: actions/download-artifact@v3
+          id: download
+              with:
+                    name: 'my-artifact'
+                          path: ./
+
+      - name: 'Echo download path'
+          run: echo ${{steps.download.outputs.download-path}}
