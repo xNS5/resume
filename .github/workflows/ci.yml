@@ -10,3 +10,10 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: MichaelKennedy_Resume.tex
+        
+      - name: Return Artifact
+        uses: actions/upload-artifact@v2
+          with:
+            name: PDF
+            path: ./MichaelKennedy_Resume.pdf
+
