@@ -9,16 +9,13 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: MichaelKennedy_Resume.tex
-        
-    steps:
-      - uses: actions/checkout@v2
+          root_file: ./MichaelKennedy_Resume.tex
 
-      - uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v3
           id: download
               with:
                     name: 'my-artifact'
-                          path: ./
+                          path: ./MichaelKennedy_Resume.tex
 
       - name: 'Echo download path'
           run: echo ${{steps.download.outputs.download-path}}
