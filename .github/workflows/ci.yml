@@ -22,6 +22,6 @@ jobs:
         with:
           root_file: ${{ env.resume_name }}.tex
       - name: Upload Artifact
-        uses: actions/upload-artifact@latest
+        uses: actions/upload-artifact@v2
         with:
           path: ${{ env.resume_name }}.pdf
