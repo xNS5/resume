@@ -10,11 +10,14 @@ jobs:
   compile_latex:
     runs-on: ubuntu-latest
     env:
-      resume_name: ${{ steps.get-name.outputs.resume_pdf }}
+      FILE_NAME: ""
+    outputs:
+      resume_name: "${{ env.file_name }}.pdf"
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Get Resume File Name
         id: get-name
-        run: echo ::set-output name=resume_pdf::"$( ls | grep *.tex | cut -f1 -d '.')" && echo ${{ env.resume_name }}
+        run: echo "$( ls | grep *.tex | cut -f1 -d '.')" >> $FILE_NAME && echo "${{ env.FILE_NAME }}"
+
 
