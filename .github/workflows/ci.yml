@@ -1,9 +1,9 @@
 name: Compile LaTeX File and Deploy to Github Pages
 
 on:
-  create:
-    tags:
-      - 'v[0-9]+\.[0-9]+\.[0-9]+'
+  push:
+    branches:
+      - main
 
 
 jobs:
