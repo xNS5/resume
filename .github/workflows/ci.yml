@@ -9,8 +9,6 @@ on:
 jobs:
   compile_latex:
     runs-on: ubuntu-latest
-    outputs:
-      resume_pdf: ${{ steps.}}
     env:
       resume_name: ""
     steps:
