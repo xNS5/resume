@@ -18,7 +18,7 @@ jobs:
         run: echo ::set-output name=resume_pdf::"$( ls | grep *.tex | cut -f1 -d '.')"
       - name: Compile LaTeX File
         id: compile-tex
-        uses: xu-cheng/latex-action@latest
+        uses: xu-cheng/latex-action@v2
         with:
           root_file: ${{ env.resume_name }}.tex
       - name: Upload Artifact
