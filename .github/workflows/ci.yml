@@ -13,7 +13,7 @@ jobs:
       resume_name: ""
     steps:
       - name: Checkout
-        uses: actions/checkout@latest
+        uses: actions/checkout@v3
       - name: Get Resume File Name
         run: echo ::set-output name=resume_pdf::"$( ls | grep *.tex | cut -f1 -d '.')"
       - name: Compile LaTeX File
