@@ -15,13 +15,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Get Resume File Name
-        run: echo ::set-output name=resume_pdf::"$( ls | grep *.tex | cut -f1 -d '.')"
-      - name: Compile LaTeX File
-        id: compile-tex
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: ${{ env.resume_name }}.tex
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          path: ${{ env.resume_name }}.pdf
+        run: echo ::set-output name=resume_pdf::"$( ls | grep *.tex | cut -f1 -d '.')" && echo ${{ env.resume_name }}
+
