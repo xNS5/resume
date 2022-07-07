@@ -9,15 +9,16 @@ on:
 jobs:
   compile_latex:
     runs-on: ubuntu-latest
-    env:
-      FILE_NAME: ""
-    outputs:
-      resume_name: "${{ env.file_name }}.pdf"
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Get Resume File Name
-        id: get-name
-        run: echo "FILE_NAME=$( ls | grep *.tex | cut -f1 -d '.')" >> $GITHUB_ENV && echo "${{ env.FILE_NAME }}"
+    - name: Checkout Files
+      uses: actions/checkout@v3
+    - name: Convert to PDF
+      id: convert-to-pdf
+      uses: xu-cheng/latex-action@v2
+      with:
+        root_file: MichaelKennedy_Resume.tex
+    - name: Print Result
+      run: ls -l
+
 
 
