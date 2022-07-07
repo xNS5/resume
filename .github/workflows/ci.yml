@@ -20,8 +20,10 @@ jobs:
       with:
         root_file: ${{ env.RESUME_NAME }}.tex
         post_compile: "latexmk -c"
-    - name: Print Result
-      run: ls -l
+    - name: Upload Artifacts
+    - uses: actions/upload-artifact@v2
+      with:
+        path: ${{ env.RESUME_NAME }}.pdf
 
 
 
