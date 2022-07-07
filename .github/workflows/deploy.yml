@@ -15,11 +15,13 @@ jobs:
         run: curl -L -O ${{ env.DOWNLOAD_URL }}
       - name: Adding updated PDF to repo
         run: git add *.pdf
-      - name: Commit Changes
-        run: git commit -m "Auto updating resume pdf"
-      - name: Fetch from Main
-        run: git fetch origin main
-      - name: Push code to Main
-        run: git push origin main
+      - name: Commit and Push Changes
+        run: |
+          git config user.name ${{ secrets.GH_USER }}
+          git config user.email "${{ secrets.GH_MAIL }}"
+          git remote add gh-token "https://${{ secrets.GH_TOKEN}}@github.com/:user/:repo.git"
+          git commit -m "Auto updating resume pdf"
+          git status
+        
 
 
