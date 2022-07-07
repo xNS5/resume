@@ -21,7 +21,7 @@ jobs:
         root_file: ${{ env.RESUME_NAME }}.tex
         post_compile: "latexmk -c"
     - name: Upload Artifacts
-    - uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         path: ${{ env.RESUME_NAME }}.pdf
 
