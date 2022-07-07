@@ -1,9 +1,8 @@
 name: Deploy Resume to Github Pages
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+
 
 jobs:
   get_pdf_and_deploy:
@@ -13,4 +12,13 @@ jobs:
         run: echo "DOWNLOAD_URL=$(curl https://api.github.com/repos/${{ github.repository }}/releases/latest | jq '.assets[0].browser_download_url')" >> $GITHUB_ENV
       - name: Download PDF From Release
         run: curl -L -O ${{ env.DOWNLOAD_URL }}
+      - name: Adding updated PDF to repo
+        run: git add *.pdf
+      - name: Commit Changes
+        run: git commit -m "Auto updating resume pdf"
+      - name: Fetch from Main
+        run: git fetch origin main
+      - name: Push code to Main
+        run: git push origin main
+
 
