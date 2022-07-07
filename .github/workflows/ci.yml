@@ -12,11 +12,14 @@ jobs:
     steps:
     - name: Checkout Files
       uses: actions/checkout@v3
+    - name: Set Resume Name
+      run: echo "RESUME_NAME=$(ls | grep *Resume.tex | cut -d. -f1)" >> $GITHUB_ENV
     - name: Convert to PDF
       id: convert-to-pdf
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: MichaelKennedy_Resume.tex
+        root_file: $RESUME_NAME.tex
+        post_compile: "latexmk -c"
     - name: Print Result
       run: ls -l
 
