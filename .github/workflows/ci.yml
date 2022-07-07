@@ -28,6 +28,7 @@ jobs:
 
 
   publish_to_gh_pages:
+    needs: [compile_latex]
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
