@@ -33,8 +33,6 @@ jobs:
     steps:
       - name: Download Artifact
         uses: actions/download-artifact@v3
-        with:
-          name: Resume
       - name: Check Artifact
         run: ls -l
 
