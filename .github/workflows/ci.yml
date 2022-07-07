@@ -18,7 +18,7 @@ jobs:
       id: convert-to-pdf
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: $RESUME_NAME.tex
+        root_file: ${{ env.RESUME_NAME }}.tex
         post_compile: "latexmk -c"
     - name: Print Result
       run: ls -l
