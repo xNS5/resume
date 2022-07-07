@@ -1,0 +1,13 @@
+name: Deploy Resume to Github Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  get_pdf_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install cURL
+        run: apt-get install -y curl
