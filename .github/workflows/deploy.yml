@@ -9,15 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.RESUME_RELEASE }}
       - name: Set Download URL
         run: echo "DOWNLOAD_URL=$(curl https://api.github.com/repos/${{ github.repository }}/releases/latest | jq '.assets[0].browser_download_url')" >> $GITHUB_ENV
       - name: Download PDF From Release
         run: curl -L -O ${{ env.DOWNLOAD_URL }}
-      - name: Adding updated PDF to repo
-        run: git add *.pdf
       - name: Commit and Push Changes
         run: |
-          git remote add gh-token "https://${{ secrets.RESUME_RELEASE }}@github.com/:user/:repo.git"
+          git remote set-url git@github.com/${{ github.repository }}.git
+          git add *.pdf
           git commit -m "Auto updating resume pdf"
           git status
         
