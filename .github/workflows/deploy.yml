@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install cURL
-        run: apt-get install -y curl
+        run: sudo apt-get install -y curl
