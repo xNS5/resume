@@ -13,7 +13,13 @@ jobs:
         run: |
           echo "BRANCH_ORIGIN=$(curl https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r '.tag_name' | awk -F\- '{print $1}')" >> $GITHUB_ENV
           echo "DOWNLOAD_URL=$(curl https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r '.assets[0].browser_download_url')" >> $GITHUB_ENV
-          echo "API_DATA='$(curl https://api.github.com/repos/${{ github.repository}}/releases/latest)'" >> $GITHUB_ENV
-      - name: Print Environment Variables
-        run: echo "${{ env.API_DATA }}"
+      - name: Download PDF From Release
+        run: curl -L -O ${{ env.DOWNLOAD_URL }}
+      - name: Commit and Push Changes
+        run: |
+          git remote set-url --push origin https://${GITHUB_REPOSITORY%/*}:${{ secrets.RESUME_RELEASE }}@github.com/${{ github.repository }}
+          echo "TAG_COMMIT=$(git rev-list -n 1 ${{ env.BRANCH_ORIGIN }} )" >> $GITHUB_ENV
+          git add *.pdf
+          git status
+          echo ${{ env.TAG_COMMIT }}
 
