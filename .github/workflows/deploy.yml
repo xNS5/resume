@@ -9,14 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Get API Data
+        run: echo "API_DATA=$(curl https://api.github.com/repos/${{ github.repository }}/releases/latest)" >> $GITHUB_ENV
       - name: Set Download URL
-        run: echo "DOWNLOAD_URL=$(curl https://api.github.com/repos/${{ github.repository }}/releases/latest | jq '.assets[0].browser_download_url')" >> $GITHUB_ENV
-      - name: Download PDF From Release
-        run: curl -L -O ${{ env.DOWNLOAD_URL }}
-      - name: Commit and Push Changes
         run: |
-          git remote set-url --push origin https://${github.repository%/*}:${{ secrets.RESUME_RELEASE }}@github.com/${{ github.repository }}
-          git status
+          echo "DOWNLOAD_URL=$( ${{ env.API_DATA }} | jq '.assets[0].browser_download_url')" >> $GITHUB_ENV
+          echo "BRANCH_ORIGIN=$( ${{ env.API_DATA }} | jq '.tag_name | awk -F\- '{print $1}')" >> $GITHUB_ENV
         
+      - name: Print Environment Variables
+        run: |
+          echo ${{ env.DOWNLOAD_URL }}
+          echo ${{ env.BRANCH_ORIGIN }}
 
 
