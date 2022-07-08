@@ -1,7 +1,9 @@
-name: Deploy Resume to Github Pages
+name: Download Release and Push to Main
 
 on:
-  workflow_dispatch:
+  release:
+    types: [published]
+
 
 
 jobs:
