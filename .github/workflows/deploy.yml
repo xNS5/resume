@@ -19,7 +19,5 @@ jobs:
         run: |
           git remote set-url --push origin https://${GITHUB_REPOSITORY%/*}:${{ secrets.RESUME_RELEASE }}@github.com/${{ github.repository }}
           echo "TAG_COMMIT=$(git rev-list -n 1 ${{ env.BRANCH_ORIGIN }} )" >> $GITHUB_ENV
-          git add *.pdf
-          git status
           echo ${{ env.TAG_COMMIT }}
 
