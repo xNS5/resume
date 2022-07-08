@@ -12,8 +12,7 @@ jobs:
       - name: Get API Data
         run: echo "API_DATA=$(curl https://api.github.com/repos/${{ github.repository }}/releases/latest)" >> $GITHUB_ENV
       - name: Set Download URL
-        run:  echo "DOWNLOAD_URL=$( ${{ env.API_DATA }} | jq '.assets[0].browser_download_url')" >> $GITHUB_ENV
-                 
+        run:  echo "DOWNLOAD_URL=$( $API_DATA | jq '.assets[0].browser_download_url')" >> $GITHUB_ENV     
       - name: Print Environment Variables
         run:   echo ${{ env.DOWNLOAD_URL }}
 
