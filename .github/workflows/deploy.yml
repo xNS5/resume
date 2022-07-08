@@ -18,6 +18,7 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git remote set-url --push origin https://${GITHUB_REPOSITORY%/*}:${{ secrets.RESUME_RELEASE }}@github.com/${{ github.repository }}
-          echo "TAG_COMMIT=$(git rev-list -n 1 ${{ env.BRANCH_ORIGIN }} )" >> $GITHUB_ENV
-          echo ${{ env.TAG_COMMIT }}
+          git add *.pdf
+          git commit -m "Automated push to main"
+          git push origin main --force
 
