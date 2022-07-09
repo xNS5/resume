@@ -3,7 +3,7 @@ name: Compile LaTeX File and Create Release
 on:
   create:
     tags:
-      - 'w[0-9]+p[0-9]-v[0-9]+\.[0-9]+\.[0-9]'
+      - 'w[0-9]+p[0-9]-v[0-9]+\.[0-9]+\.[0-9]+'
 
 jobs:
   compile_latex:
@@ -28,6 +28,6 @@ jobs:
       with:
         draft: true
         tag: ${{ env.TAG }}
-        artifacts: ${{ env.RESUME_NAME }}.pdf
+        artifacts: ${{ env.RESUME_NAME }}.pdf, ${{ env.RESUME_NAME }}.tex
         bodyFile: ${{ github.workspace }}-CHANGELOG.md
         token: ${{ secrets.RESUME_RELEASE }}
