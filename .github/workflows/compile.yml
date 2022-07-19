@@ -26,6 +26,9 @@ jobs:
   build_pages_site:
     needs: [compile_latex]
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - name: Checkout Files
         uses: actions/checkout@v3
