@@ -1,9 +1,7 @@
 name: Compile LaTeX File
 
 on:
-  push:
-    paths:
-      - '*Resume.tex'
+  push
 
 jobs:
   compile_latex:
