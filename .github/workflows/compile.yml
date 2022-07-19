@@ -33,5 +33,6 @@ jobs:
       - name: Build Pages
         uses: actions/jekyll-build-pages@latest
       - name: Deploy Pages
+        uses: actions/deploy-pages@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
