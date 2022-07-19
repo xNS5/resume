@@ -19,7 +19,6 @@ jobs:
         post_compile: "latexmk -c"
     - name: Push to Repo
       run: |
-          git remote set-url --push origin https://${github.repository%/*}:${{ secrets.RESUME_RELEASE }}@github.com/${{ github.repository }}
           git add ${{ env.RESUME_NAME }}.pdf
           git commit -m "Automated push"
           git push --force
