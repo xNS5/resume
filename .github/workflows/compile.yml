@@ -1,7 +1,9 @@
-name: Compile LaTeX File
+name: Compile LaTeX Resume
 
 on:
-  push
+  push:
+    paths:
+      - "*Resume.tex"
 
 jobs:
   compile_latex:
@@ -20,7 +22,7 @@ jobs:
     - name: Push to Repo
       run: |
           git add ${{ env.RESUME_NAME }}.pdf
-          git commit -m "Automated push"
+          git commit -m "Automated update of ${{ env.RESUME_NAME }}.pdf"
           git push --force
 
   build_and_deploy:
