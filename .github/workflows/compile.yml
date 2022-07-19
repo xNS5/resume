@@ -23,18 +23,18 @@ jobs:
           git commit -m "Automated push"
           git push --force
 
-  build_pages_site:
+  build_and_deploy:
     needs: [compile_latex]
     runs-on: ubuntu-latest
     permissions:
-      id-token: write
-      contents: read
+      contents: write
     steps:
       - name: Checkout Files
         uses: actions/checkout@v3
       - name: Build Pages
         uses: actions/jekyll-build-pages@v1
       - name: Deploy Pages
-        uses: actions/deploy-pages@v1
-        with:
+        uses: JamesIves/github-pages-deploy-action@v4
+        with: 
+          folder: ./_site
           token: ${{ secrets.RESUME_RELEASE }}
