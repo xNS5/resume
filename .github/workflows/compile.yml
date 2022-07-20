@@ -40,3 +40,4 @@ jobs:
         with: 
           folder: ./_site
           token: ${{ secrets.RESUME_RELEASE }}
+          commit-message: "Deploying to gh-pages"
