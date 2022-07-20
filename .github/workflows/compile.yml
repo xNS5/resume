@@ -34,5 +34,6 @@ jobs:
       - name: Deploy Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          folder: ./
           token: ${{ secrets.RESUME_RELEASE }}
           commit-message: "Deploying to gh-pages"
