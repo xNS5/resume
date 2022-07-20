@@ -19,7 +19,7 @@ jobs:
         post_compile: "latexmk -c"
     - name: Push to Repo
       run: |
-          git add ${{ env.RESUME_NAME }}.pdf
+          git add ${{ env.RESUME_NAME }}.pdf -f
           git commit -m "Automated update of ${{ env.RESUME_NAME }}.pdf"
           git push --force
 
