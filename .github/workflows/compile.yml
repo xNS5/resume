@@ -29,7 +29,7 @@ jobs:
     - name: Push to pages branch
       run: |
           git config --local user.email "actions@github.com"
-          git config --local user.name actions-usert
+          git config --local user.name actions-user
           git add --force *
           git commit -m "$(git log -1 --pretty='%s')"
-          git push origin gh-pages --force
+          git push $(git ls-remote --get-url origin) main:gh-pages --force
