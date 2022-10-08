@@ -27,7 +27,7 @@ jobs:
         post_compile: "latexmk -c"
     - name: Create branch if doesn't already exist
       uses: JamesIves/github-pages-deploy-action@v4
-      if: ${{ env.PAGES_BRANCH_EXISTS }} != 'true'
+      if: "!${{ env.PAGES_BRANCH_EXISTS }}"
       with: 
         folder: .
         token: ${{ secrets.RESUME_RELEASE }}
