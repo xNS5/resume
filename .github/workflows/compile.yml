@@ -16,7 +16,7 @@ jobs:
       run: |
         echo "RESUME_NAME=$(ls | grep *Resume.tex | cut -d. -f1)" >> $GITHUB_ENV
         exists=false
-        if [[ $(git rev-parse origin --verify --quiet gh-pages) ]]; then
+        if [[ $(git branch -a | grep "remotes/origin/gh-pages") ]]; then
           exists=true
         fi
         echo "PAGES_BRANCH_EXISTS=$exists" >> $GITHUB_ENV
@@ -36,4 +36,4 @@ jobs:
       run: |
           git add --force *
           git commit -m "$(git log -1 --pretty='%s')"
-          git push origin gh_pages --force
+          git push origin gh-pages --force
