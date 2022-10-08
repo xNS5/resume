@@ -1,4 +1,4 @@
-name: Compile LaTeX Resume
+name: Compile LaTeX Resume and Push To GH Pages
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       run: |
         echo "RESUME_NAME=$(ls | grep *Resume.tex | cut -d. -f1)" >> $GITHUB_ENV
         exists=false
-        if [[ -n $(git rev-parse origin --verify --quiet gh_pages) ]]; then
+        if [[ $(git rev-parse origin --verify --quiet gh_pages) ]]; then
           exists=true
         fi
         echo "PAGES_BRANCH_EXISTS=$exists" >> $GITHUB_ENV
@@ -35,5 +35,5 @@ jobs:
     - name: Push to pages branch
       run: |
           git add --force *
-          git commit -m "${{ github.events.head_commit.message }}"
+          git commit -m "$(git log -1 --pretty='%s')"
           git push origin gh_pages --force
