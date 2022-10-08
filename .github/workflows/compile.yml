@@ -20,18 +20,12 @@ jobs:
           exists=true
         fi
         echo "PAGES_BRANCH_EXISTS=$exists" >> $GITHUB_ENV
+        echo "${{ env.PAGES_BRANCH_EXISTS }}"
     - name: Compile TeX File
       uses: xu-cheng/latex-action@v2
       with:
         root_file: ${{ env.RESUME_NAME }}.tex
         post_compile: "latexmk -c"
-    - name: Create branch if doesn't already exist
-      uses: JamesIves/github-pages-deploy-action@v4
-      if: "!${{ env.PAGES_BRANCH_EXISTS }}"
-      with: 
-        folder: .
-        token: ${{ secrets.RESUME_RELEASE }}
-        commit-message: "Deploying to gh-pages"
     - name: Push to pages branch
       run: |
           git add --force *
