@@ -1,7 +1,9 @@
 name: Compile LaTeX Resume
 
 on:
-  push
+  push:
+    branches: ['main']
+    paths: ['*.tex']
 
 jobs:
   compile_latex:
@@ -10,30 +12,28 @@ jobs:
     - name: Checkout Files
       uses: actions/checkout@v3
     - uses: fregante/setup-git-user@v1
-    - name: Set Resume Name Environment Variable
-      run: echo "RESUME_NAME=$(ls | grep *Resume.tex | cut -d. -f1)" >> $GITHUB_ENV
+    - name: Set Environment Variables
+      run: |
+        echo "RESUME_NAME=$(ls | grep *Resume.tex | cut -d. -f1)" >> $GITHUB_ENV
+        exists=false
+        if [[ -n $(git rev-parse origin --verify --quiet gh_pages) ]]; then
+          exists=true
+        fi
+        echo "PAGES_BRANCH_EXISTS=$exists" >> $GITHUB_ENV
     - name: Convert to PDF
       uses: xu-cheng/latex-action@v2
       with:
         root_file: ${{ env.RESUME_NAME }}.tex
         post_compile: "latexmk -c"
-    - name: Push to Repo
+    - name: Create branch if doesn't already exist
+      uses: JamesIves/github-pages-deploy-action@v4
+      if: ${{ env.PAGES_BRANCH_EXISTS }} == false 
+      with: 
+        folder: .
+        token: ${{ secrets.RESUME_RELEASE }}
+        commit-message: "Deploying to gh-pages"
+    - name: Push to pages branch
       run: |
-          git add ${{ env.RESUME_NAME }}.pdf
-          git commit -m "Automated update of ${{ env.RESUME_NAME }}.pdf"
-          git push --force
-
-  build_and_deploy:
-    needs: [compile_latex]
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout Files
-        uses: actions/checkout@v3
-      - name: Deploy Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: .
-          token: ${{ secrets.RESUME_RELEASE }}
-          commit-message: "Deploying to gh-pages"
+          git add --force *
+          git commit -m "${{ github.events.head_commit.message }}"
+          git push origin gh_pages --force
