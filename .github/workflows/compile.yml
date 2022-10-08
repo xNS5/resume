@@ -12,7 +12,6 @@ jobs:
     steps:
     - name: Checkout Files
       uses: actions/checkout@v3
-    - uses: fregante/setup-git-user@v1
     - name: Set Environment Variables
       run: |
         echo "RESUME_NAME=$(ls | grep *Resume.tex | cut -d. -f1)" >> $GITHUB_ENV
@@ -21,7 +20,7 @@ jobs:
           exists=true
         fi
         echo "PAGES_BRANCH_EXISTS=$exists" >> $GITHUB_ENV
-    - name: Convert to PDF
+    - name: Compile TeX File
       uses: xu-cheng/latex-action@v2
       with:
         root_file: ${{ env.RESUME_NAME }}.tex
