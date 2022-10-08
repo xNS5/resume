@@ -16,7 +16,7 @@ jobs:
       run: |
         echo "RESUME_NAME=$(ls | grep *Resume.tex | cut -d. -f1)" >> $GITHUB_ENV
         exists=false
-        if [[ $(git rev-parse origin --verify --quiet gh_pages) ]]; then
+        if [[ $(git rev-parse origin --verify --quiet gh-pages) ]]; then
           exists=true
         fi
         echo "PAGES_BRANCH_EXISTS=$exists" >> $GITHUB_ENV
