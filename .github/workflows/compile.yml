@@ -12,19 +12,10 @@ jobs:
     steps:
     - name: Checkout Files
       uses: actions/checkout@v3
-    - name: Set Environment Variables
-      run: |
-        echo "RESUME_NAME=$(ls | grep *Resume.tex | cut -d. -f1)" >> $GITHUB_ENV
-        exists=false
-        if [[ $(git branch -a | grep "remotes/origin/gh-pages") ]]; then
-          exists=true
-        fi
-        echo "PAGES_BRANCH_EXISTS=$exists" >> $GITHUB_ENV
-        echo "${{ env.PAGES_BRANCH_EXISTS }}"
     - name: Compile TeX File
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: ${{ env.RESUME_NAME }}.tex
+        root_file: $(ls | grep *Resume.tex | cut -d. -f1).tex
         post_compile: "latexmk -c"
     - name: Push to pages branch
       run: |
