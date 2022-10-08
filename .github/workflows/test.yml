@@ -12,4 +12,4 @@ jobs:
       - name: Checkout Files
         uses: actions/checkout@v3
       - name: Print Last Commit Message
-        run: echo "${{ github.events.head_commit.message }}"
+        run: echo "$(git reflog -1 | sed 's/^.*: //')"
