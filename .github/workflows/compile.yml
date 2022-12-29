@@ -13,7 +13,7 @@ jobs:
     - name: Checkout Files
       uses: actions/checkout@v3
     - name: Compile TeX File
-      uses: xu-cheng/latex-action@v2.7.0
+      uses: xu-cheng/latex-action@v2.7
       with:
         root_file: "*.tex"
         post_compile: "latexmk -c"
