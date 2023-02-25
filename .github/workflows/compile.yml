@@ -15,7 +15,8 @@ jobs:
     - name: Compile TeX File
       uses: xu-cheng/latex-action@v2
       with:
-        root_file: $(ls | grep *Resume.tex | cut -d. -f1).tex
+        root_file: "*.tex"
+        glob_root_file: true
         post_compile: "latexmk -c"
     - name: Push to pages branch
       run: |
