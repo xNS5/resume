@@ -1,8 +1,8 @@
-name: Compile LaTeX Resume and Push To GH Pages
+name: Compile LaTeX Resume and Push To Pages Branches
 
 on:
   push:
-    branches: ['main']
+    branches: ['staging1', 'staging2']
     paths: ['*.tex']
   workflow_dispatch:
 
@@ -12,19 +12,10 @@ jobs:
     steps:
     - name: Checkout Files
       uses: actions/checkout@v4
-    - name: Set Tex File Name
-      run: |
-        latex_files=$(find . -type f -name "*.tex")
-        first_tex_file=$(echo "$latex_files" | head -n 1)
-        echo "TEX_FILE=$first_tex_file" >> $GITHUB_ENV
-
-        if [ $GITHUB_REF == 'refs/heads/main' ]; then
-          sed -i 's/\\disablesymbolfalse/\\disablesymboltrue/g' $first_tex_file
-        fi
     - name: Compile TeX File
       uses: xu-cheng/latex-action@v3
       with:
-        root_file: ${{ env.TEX_FILE }}
+        root_file: "*.tex"
         post_compile: "latexmk -c"
     - name: Push to pages branch
       run: |
@@ -32,4 +23,12 @@ jobs:
           git config --local user.name actions-user
           git add --force *
           git commit -m "$(git log -1 --pretty='%s')"
-          git push $(git ls-remote --get-url origin) main:gh-pages --force
+          if [ $GITHUB_REF == "refs/heads/staging1"]; then
+            git push $(git ls-remote --get-url origin) staging1:prod --force
+          else
+            git push $(git ls-remote --get-url origin) staging2:ats-friendly --force
+          fi
+
+
+
+          
