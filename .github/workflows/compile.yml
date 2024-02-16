@@ -1,10 +1,8 @@
-name: Compile LaTeX Resume and Push To Pages Branches
+name: Compile LaTeX Resume and Push To GH Pages
 
 on:
   push:
-    branches:
-      - staging1
-      - staging2
+    branches: ['main']
     paths: ['*.tex']
   workflow_dispatch:
 
@@ -13,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Files
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
     - name: Compile TeX File
-      uses: xu-cheng/latex-action@v3
+      uses: xu-cheng/latex-action@v2
       with:
         root_file: "*.tex"
         post_compile: "latexmk -c"
@@ -25,12 +23,4 @@ jobs:
           git config --local user.name actions-user
           git add --force *
           git commit -m "$(git log -1 --pretty='%s')"
-          if [ $GITHUB_REF == "refs/heads/staging1"]; then
-            git push $(git ls-remote --get-url origin) staging1:prod --force
-          else
-            git push $(git ls-remote --get-url origin) staging2:ats-friendly --force
-          fi
-
-
-
-          
+          git push $(git ls-remote --get-url origin) main:prod --force
