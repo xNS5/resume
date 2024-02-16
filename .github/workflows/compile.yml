@@ -19,9 +19,9 @@ jobs:
         echo "TEX_FILE=$first_tex_file" >> $GITHUB_ENV
 
         if [ $GITHUB_REF == 'refs/heads/main' ]; then
-          echo "ARGS=\"-interaction=nonstopmode \"\def\disableiconfalse\input{$first_tex_file}\"\"" >> $GITHUB_ENV
+          echo "ARGS='-interaction=nonstopmode \"\def\disableiconfalse\input{$first_tex_file}\"'" >> $GITHUB_ENV
         else
-          echo "ARGS=\"-interaction=nonstopmode \"\def\disableicontrue\input{$first_tex_file}\"\"" >> $GITHUB_ENV
+          echo "ARGS='-interaction=nonstopmode \"\def\disableicontrue\input{$first_tex_file}\"'" >> $GITHUB_ENV
         fi
     - name: Compile TeX File
       uses: xu-cheng/latex-action@v3
