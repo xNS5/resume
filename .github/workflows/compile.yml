@@ -16,18 +16,15 @@ jobs:
       run: |
         latex_files=$(find . -type f -name "*.tex")
         first_tex_file=$(echo "$latex_files" | head -n 1)
-        echo "::set-output name=TEX_FILE::$first_tex_file"
-
-        ARGS=""
+        echo "TEX_FILE=$first_tex_file" >> $GITHUB_ENV
 
         if [ $GITHUB_REF == 'refs/heads/main' ]; then
-          $ARGS="-interaction=nonstopmode -jobname=with_icon \"\def\disableiconfalse\input{$first_tex_file}\""
+          echo "ARGS=\"-interaction=nonstopmode -jobname=with_icon \"\def\disableiconfalse\input{$first_tex_file}\"\"" >> $GITHUB_ENV
         else
-          $ARGS="-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\""
+          echo "ARGS=\"-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\"\"" >> $GITHUB_ENV
         fi
 
         echo "$ARGS"
-
     # - name: Compile TeX File
     #   uses: xu-cheng/latex-action@v3
     #   with:
