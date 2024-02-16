@@ -23,15 +23,13 @@ jobs:
         else
           echo "ARGS=\"-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\"\"" >> $GITHUB_ENV
         fi
-
-        echo "$ARGS"
-    # - name: Compile TeX File
-    #   uses: xu-cheng/latex-action@v3
-    #   with:
-    #     root_file: { $FIRST_TEX_FILE }
-    #     args: { $ARGS }
-    #     glob_root_file: true
-    #     post_compile: "latexmk -c"
+    - name: Compile TeX File
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: $TEX_FILE
+        args: $ARGS
+        glob_root_file: true
+        post_compile: "latexmk -c"
     # - name: Push to pages branch
     #   run: |
     #       git config --local user.email "actions@github.com"
