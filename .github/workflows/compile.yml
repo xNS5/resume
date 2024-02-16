@@ -12,19 +12,22 @@ jobs:
     steps:
     - name: Checkout Files
       uses: actions/checkout@v3
-    - name: Set Compile Flag
+    - name: Set Tex File Name
       run: |
         latex_files=$(find . -type f -name "*.tex")
         first_tex_file=$(echo "$latex_files" | head -n 1)
-        echo "FIRST_TEX_FILE=$first_tex_file" >> $GITHUB_ENV
+        echo "::set-output name=TEX_FILE::$first_tex_file"
+
+        ARGS=""
 
         if [ $GITHUB_REF == 'refs/heads/main' ]; then
-          echo ARGS="-interaction=nonstopmode -jobname=with_icon \"\def\disableiconfalse\input{$first_tex_file}\"" >> $GITHUB_ENV
+          $ARGS="-interaction=nonstopmode -jobname=with_icon \"\def\disableiconfalse\input{$first_tex_file}\""
         else
-          echo ARGS="-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\"" >> $GITHUB_ENV
+          $ARGS="-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\"""
         fi
-        echo "$GITHUB_ENV"
         
+        echo "$ARGS"
+
     # - name: Compile TeX File
     #   uses: xu-cheng/latex-action@v3
     #   with:
