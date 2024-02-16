@@ -23,9 +23,9 @@ jobs:
         if [ $GITHUB_REF == 'refs/heads/main' ]; then
           $ARGS="-interaction=nonstopmode -jobname=with_icon \"\def\disableiconfalse\input{$first_tex_file}\""
         else
-          $ARGS="-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\"""
+          $ARGS="-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\""
         fi
-        
+
         echo "$ARGS"
 
     # - name: Compile TeX File
