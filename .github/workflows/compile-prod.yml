@@ -18,7 +18,7 @@ jobs:
         first_tex_file=$(echo "$latex_files" | head -n 1)
         echo "TEX_FILE=$first_tex_file" >> $GITHUB_ENV
 
-        if [ $GITHUB_REF == 'refs/heads/main' ]; then
+        if [ $GITHUB_REF != 'refs/heads/main' ]; then
           sed -i 's/\\disablesymbolfalse/\\disablesymboltrue/g' $first_tex_file
         fi
     - name: Compile TeX File
@@ -30,6 +30,18 @@ jobs:
       run: |
           git config --local user.email "actions@github.com"
           git config --local user.name actions-user
-          git add --force *
+
+          git add --force *.tex 
           git commit -m "$(git log -1 --pretty='%s')"
-          git push $(git ls-remote --get-url origin) main:gh-pages --force
+
+          git push $(git ls-remote --get-url origin) main:prod --force
+          git push $(git ls-remote --get-url origin) main:ats-friendly --force
+
+          git add *.pdf
+          git commit -m "$(git log -1 --pretty='%s')"
+          git push $(git ls-remote --get-url origin) main:prod --force
+          
+
+
+
+          

@@ -1,0 +1,36 @@
+name: Compile LaTeX Resume and Push To GH Pages
+
+on:
+  push:
+    branches: ['ats-friendly']
+    paths: ['*.tex']
+  workflow_dispatch:
+
+jobs:
+  compile_latex:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Files
+      uses: actions/checkout@v4
+    - name: Set Tex File Name
+      run: |
+        latex_files=$(find . -type f -name "*.tex")
+        first_tex_file=$(echo "$latex_files" | head -n 1)
+        echo "TEX_FILE=$first_tex_file" >> $GITHUB_ENV
+    - name: Compile TeX File
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: ${{ env.TEX_FILE }}
+        post_compile: "latexmk -c"
+    - name: Push to pages branch
+      run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name actions-user
+          git add --force *
+          git commit -m "$(git log -1 --pretty='%s')"
+          git push $(git ls-remote --get-url origin) ats-friendly:ats-friendly-release --force
+          
+
+
+
+          
