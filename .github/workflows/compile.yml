@@ -25,7 +25,6 @@ jobs:
         fi
     - name: Compile TeX File
       uses: xu-cheng/latex-action@v3
-      if: github.ref == "refs/heads/main"
       with:
         root_file: ${{ env.TEX_FILE }}
         args: ${{ env.ARGS }}
