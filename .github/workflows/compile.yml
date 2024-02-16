@@ -18,20 +18,18 @@ jobs:
         first_tex_file=$(echo "$latex_files" | head -n 1)
         echo "FIRST_TEX_FILE=$first_tex_file" >> $GITHUB_ENV
 
-        echo "$GITHUB_REF"
         if [ $GITHUB_REF == 'refs/heads/main' ]; then
-          echo "-interaction=nonstopmode -jobname=with_icon \"\def\disableiconfalse\input{$first_tex_file}\""
           echo ARGS="-interaction=nonstopmode -jobname=with_icon \"\def\disableiconfalse\input{$first_tex_file}\"" >> $GITHUB_ENV
         else
-          echo "-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\""
           echo ARGS="-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\"" >> $GITHUB_ENV
         fi
-
-        echo "Arguments: $ARGS"
+        echo "$GITHUB_ENV"
+        
     # - name: Compile TeX File
     #   uses: xu-cheng/latex-action@v3
     #   with:
     #     root_file: { $FIRST_TEX_FILE }
+    #     args: { $ARGS }
     #     glob_root_file: true
     #     post_compile: "latexmk -c"
     # - name: Push to pages branch
