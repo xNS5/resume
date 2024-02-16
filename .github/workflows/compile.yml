@@ -23,7 +23,7 @@ jobs:
         else
           echo ARGS="-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}" >> $GITHUB_ENV
         fi
-        echo "$ARGS"
+        echo "$first_tex_file"
     # - name: Compile TeX File
     #   uses: xu-cheng/latex-action@v3
     #   with:
