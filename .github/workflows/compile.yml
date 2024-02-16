@@ -26,7 +26,7 @@ jobs:
     - name: Compile TeX File
       uses: xu-cheng/latex-action@v3
       with:
-        root_file: "$TEX_FILE"
+        root_file: "*.tex"
         args: "$ARGS"
         glob_root_file: true
         post_compile: "latexmk -c"
