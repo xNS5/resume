@@ -110,6 +110,18 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
+\newif\ifdisablesymbol
+\disablesymbolfalse
+
+\newcommand{\rendericon}[1]{%
+    \ifdisablesymbol
+        %
+    \else
+        #1
+    \fi
+}
+
+
 \color{text-grey}
 \begin{document}
 %-------------------------------------------
@@ -117,12 +129,11 @@
 
 %----------HEADING----------
 \begin{center}
-
     \textbf{\Huge Michael Kennedy} \\ \vspace{5pt}
-    \small \faPhone \hspace{2pt} 831.917.9737 \hspace{1pt} $|$
-    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:michael@michaelkennedy.dev}{michael@michaelkennedy.dev} \hspace{1pt} $|$ 
-    \hspace{1pt} \faLinkedinSquare \hspace{2pt} \href{https://www.linkedin.com/in/mw-kennedy}{linkedin.com/in/mw-kennedy} \hspace{1pt}$|$
-    \hspace{1pt} \faGithubSquare \hspace{2pt} \href{https://github.com/xNS5}{github.com/xNS5}
+    \small \rendericon{\faPhone} \hspace{2pt} 831.917.9737 \hspace{1pt} $|$
+    \hspace{1pt} \rendericon{\faEnvelope} \hspace{2pt} \href{mailto:michael@michaelkennedy.dev}{michael@michaelkennedy.dev} \hspace{1pt} $|$ 
+    \hspace{1pt} \rendericon{\faLinkedinSquare} \hspace{2pt} \href{https://www.linkedin.com/in/mw-kennedy}{linkedin.com/in/mw-kennedy} \hspace{1pt}$|$
+    \hspace{1pt} \rendericon{\faGithubSquare} \hspace{2pt} \href{https://github.com/xNS5}{github.com/xNS5}
     \\ \vspace{-3pt}
 \end{center}
 
