@@ -25,9 +25,10 @@ jobs:
         fi
     - name: Compile TeX File
       uses: xu-cheng/latex-action@v3
+      if: github.ref == "refs/heads/main"
       with:
-        root_file: "*.tex"
-        args: "$ARGS"
+        root_file: ${{ env.TEX_FILE }}
+        args: ${{ env.ARGS }}
         glob_root_file: true
         post_compile: "latexmk -c"
     # - name: Push to pages branch
