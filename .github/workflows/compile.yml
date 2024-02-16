@@ -2,7 +2,9 @@ name: Compile LaTeX Resume and Push To Pages Branches
 
 on:
   push:
-    branches: ['staging1', 'staging2']
+    branches:
+      - staging1
+      - staging2
     paths: ['*.tex']
   workflow_dispatch:
 
