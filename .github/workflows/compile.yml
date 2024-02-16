@@ -19,15 +19,16 @@ jobs:
         echo "TEX_FILE=$first_tex_file" >> $GITHUB_ENV
 
         if [ $GITHUB_REF == 'refs/heads/main' ]; then
-          echo "ARGS=-interaction=nonstopmode \def\disableiconfalse\input{$first_tex_file}" >> $GITHUB_ENV
+          echo "ARGS=-pdf -interaction=nonstopmode \"\def\disableiconfalse\input{$first_tex_file}\"" >> $GITHUB_ENV
         else
-          echo "ARGS=-interaction=nonstopmode \def\disableicontrue\input{$first_tex_file}" >> $GITHUB_ENV
+          echo "ARGS=-pdf -interaction=nonstopmode \"\def\disableicontrue\input{$first_tex_file}\"" >> $GITHUB_ENV
         fi
     - name: Compile TeX File
       uses: xu-cheng/latex-action@v3
       with:
         root_file: ${{ env.TEX_FILE }}
         args: ${{ env.ARGS }}
+        latexmk_shell_escape: true
         glob_root_file: true
         post_compile: "latexmk -c"
     # - name: Push to pages branch
