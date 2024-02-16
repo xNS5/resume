@@ -20,8 +20,10 @@ jobs:
 
         echo "$GITHUB_REF"
         if [ $GITHUB_REF == 'refs/heads/main' ]; then
+          echo "-interaction=nonstopmode -jobname=with_icon \"\def\disableiconfalse\input{$first_tex_file}\""
           echo ARGS="-interaction=nonstopmode -jobname=with_icon \"\def\disableiconfalse\input{$first_tex_file}\"" >> $GITHUB_ENV
         else
+          echo "-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\""
           echo ARGS="-interaction=nonstopmode -jobname=without_icon \"\def\disableicontrue\input{$first_tex_file}\"" >> $GITHUB_ENV
         fi
 
