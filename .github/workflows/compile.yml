@@ -20,7 +20,7 @@ jobs:
       run: |
           resume_file=$(find . -type f -name "*Resume.tex")
           resume_tex_file=$(echo "$resume_file" | head -n 1)
-          echo "RESUME_FILE_NAME=${resume_tex_file%.*}" >> $GITHUB_ENV
+          echo "RESUME_FILE_NAME=$(basename $resume_tex_file .tex)" >> $GITHUB_ENV
           echo "${{env.RESUME_FILE_NAME}}"
     # - name: Compile Main TeX File
     #   uses: xu-cheng/latex-action@v3
