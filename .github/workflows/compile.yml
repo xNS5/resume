@@ -16,12 +16,16 @@ jobs:
       run: |
           git config --local user.email "actions@github.com"
           git config --local user.name actions-
-          git remote add ats git@github.com:xNS5/ats-friendly-resume.git
     - name: Get Resume Tex File Name
       run: |
           resume_file=$(find . -type f -name "*Resume.tex")
           resume_tex_file=$(echo "$resume_file" | head -n 1)
           echo "RESUME_FILE_NAME=$(basename $resume_tex_file .tex)" >> $GITHUB_ENV
+    - name: Modify For ATS Friendly Version
+      run: |
+          if [[ "${{ github.event.repository.name }}" == "your-repository-name" ]]; then
+            sed -i -e 's/\\disablesymbolfalse/\\disablesymboltrue/g' ${{env.RESUME_FILE_NAME}}.tex
+          fi
     - name: Compile Main TeX File
       uses: xu-cheng/latex-action@v3
       with:
@@ -32,15 +36,3 @@ jobs:
           git add --force \*.tex \*.pdf
           git commit -m "$(git log -1 --pretty='%s')"
           git push $(git ls-remote --get-url origin) main:prod --force
-    - name: Modify For ATS Friendly Version
-      run: sed -i -e 's/\\disablesymbolfalse/\\disablesymboltrue/g' ${{env.RESUME_FILE_NAME}}.tex
-    - name: Compile ATS Friendly TeX File
-      uses: xu-cheng/latex-action@v3
-      with:
-        root_file: ${{ env.RESUME_FILE_NAME }}.tex
-        post_compile: "latexmk -c"
-    - name: Push to ATS Friendly Branch
-      run: |
-          git add --force \*.tex \*.pdf
-          git commit -m "$(git log -1 --pretty='%s')"
-          git push $(git ls-remote --get-url ats) main:prod --force
