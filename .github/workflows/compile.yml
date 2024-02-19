@@ -23,7 +23,7 @@ jobs:
           echo "RESUME_FILE_NAME=$(basename $resume_tex_file .tex)" >> $GITHUB_ENV
     - name: Modify For ATS Friendly Version
       run: |
-          if [[ "${{ github.event.repository.name }}" == "your-repository-name" ]]; then
+          if [[ "${{ github.event.repository.name }}" != "resume" ]]; then
             sed -i -e 's/\\disablesymbolfalse/\\disablesymboltrue/g' ${{env.RESUME_FILE_NAME}}.tex
           fi
     - name: Compile Main TeX File
