@@ -15,7 +15,8 @@ jobs:
     - name: Setting Git User
       run: |
           git config --local user.email "actions@github.com"
-          git config --local user.name actions-user
+          git config --local user.name actions-
+          git remote add ats git@github.com:xNS5/ats-friendly-resume.git
     - name: Get Resume Tex File Name
       run: |
           resume_file=$(find . -type f -name "*Resume.tex")
@@ -42,4 +43,4 @@ jobs:
       run: |
           git add --force \*.tex \*.pdf
           git commit -m "$(git log -1 --pretty='%s')"
-          git push $(git ls-remote --get-url origin) main:ats-friendly --force
+          git push $(git ls-remote --get-url ats) main:prod --force
