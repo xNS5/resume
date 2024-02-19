@@ -31,15 +31,15 @@ jobs:
           git add --force \*.tex \*.pdf
           git commit -m "$(git log -1 --pretty='%s')"
           git push $(git ls-remote --get-url origin) main:prod --force
-    # - name: Modify For ATS Friendly Version
-    #   run: sed -i -e 's/\\disablesymbolfalse/\\disablesymboltrue/g' *.tex
-    #  - name: Compile ATS Friendly TeX File
-    #   uses: xu-cheng/latex-action@v3
-    #   with:
-    #     root_file: "*.tex"
-    #     post_compile: "latexmk -c"
-    # - name: Push to ATS Friendly Branch
-    #   run: |
-    #       git add --force *
-    #       git commit -m "$(git log -1 --pretty='%s')"
-    #       git push $(git ls-remote --get-url origin) main:ats-friendly --force
+    - name: Modify For ATS Friendly Version
+      run: sed -i -e 's/\\disablesymbolfalse/\\disablesymboltrue/g' ${{env.RESUME_FILE_NAME}}.tex
+    - name: Compile ATS Friendly TeX File
+      uses: xu-cheng/latex-action@v3
+      with:
+        root_file: ${{ env.RESUME_FILE_NAME }}.tex
+        post_compile: "latexmk -c"
+    - name: Push to ATS Friendly Branch
+      run: |
+          git add --force \*.tex \*.pdf
+          git commit -m "$(git log -1 --pretty='%s')"
+          git push $(git ls-remote --get-url origin) main:ats-friendly --force
