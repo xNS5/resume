@@ -12,15 +12,35 @@ jobs:
     steps:
     - name: Checkout Files
       uses: actions/checkout@v3
-    - name: Compile TeX File
-      uses: xu-cheng/latex-action@v2
-      with:
-        root_file: "*.tex"
-        post_compile: "latexmk -c"
-    - name: Push to pages branch
+    - name: Setting Git User
       run: |
           git config --local user.email "actions@github.com"
           git config --local user.name actions-user
-          git add --force *
-          git commit -m "$(git log -1 --pretty='%s')"
-          git push $(git ls-remote --get-url origin) main:prod --force
+    - name: Get Resume Tex File Name
+      run: |
+          resume_file=$(find . -type f -name "*Resume.tex")
+          resume_tex_file=$(echo "$resume_file" | head -n 1)
+          echo "RESUME_FILE_NAME=$r{esume_tex_file%.*}" >> $GITHUB_ENV
+          echo "${{env.RESUME_FILE_NAME}}"
+    # - name: Compile Main TeX File
+    #   uses: xu-cheng/latex-action@v3
+    #   with:
+    #     root_file: ${{ env.RESUME_FILE_NAME }}.tex
+    #     post_compile: "latexmk -c"
+    # - name: Push to pages branch
+    #   run: |
+    #       git add --force *
+    #       git commit -m "$(git log -1 --pretty='%s')"
+    #       git push $(git ls-remote --get-url origin) main:prod --force
+    # - name: Modify For ATS Friendly Version
+    #   run: sed -i -e 's/\\disablesymbolfalse/\\disablesymboltrue/g' *.tex
+    #  - name: Compile ATS Friendly TeX File
+    #   uses: xu-cheng/latex-action@v3
+    #   with:
+    #     root_file: "*.tex"
+    #     post_compile: "latexmk -c"
+    # - name: Push to ATS Friendly Branch
+    #   run: |
+    #       git add --force *
+    #       git commit -m "$(git log -1 --pretty='%s')"
+    #       git push $(git ls-remote --get-url origin) main:ats-friendly --force
