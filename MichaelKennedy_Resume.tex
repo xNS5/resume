@@ -35,8 +35,8 @@
 \renewcommand{\ULdepth}{1.8pt}
 \contourlength{0.8pt}
 \newcommand{\myuline}[1]{%
-  \uline{\phantom{#1}}%
-  \llap{\contour{white}{#1}}%
+    \uline{\phantom{#1}}%
+    \llap{\contour{white}{#1}}%
 }
 
 
@@ -73,49 +73,49 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-1pt}}
-  }
-}
+    \item\small{
+            {#1 \vspace{-1pt}}
+        }
+    }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
-      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
-    \end{tabular*}\vspace{-4pt}
-}
+    \newcommand{\resumeSubheading}[4]{
+        \vspace{-1pt}\item
+        \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+            \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+            \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+        \end{tabular*}\vspace{-4pt}
+    }
 
-\newcommand{\resumeSubSubheading}[2]{
+    \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
+        \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+            \textit{\small#1} & \textit{\small #2} \\
+        \end{tabular*}\vspace{-7pt}
+    }
 
-\newcommand{\resumeProjectHeading}[2]{
+    \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-        \textit{\small#1} & {\color{dark-grey}\small #2}\vspace{2pt} \\
-    \end{tabular*}\vspace{-5pt}
-}
+        \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+            \textit{\small#1} & {\color{dark-grey}\small #2}\vspace{2pt} \\
+        \end{tabular*}\vspace{-5pt}
+    }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+    \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+    \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-% CHANGED default leftmargin  0.15 in
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+    % CHANGED default leftmargin  0.15 in
+    \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+    \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+    \newcommand{\resumeItemListStart}{\begin{itemize}}
+    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
-\newif\ifdisablesymbol
-\disablesymbolfalse
+    \newif\ifdisablesymbol
+    \disablesymbolfalse
 
-\newcommand{\rendericon}[1]{%
-    \ifdisablesymbol
-        %
+    \newcommand{\rendericon}[1]{%
+        \ifdisablesymbol
+            %
     \else
         #1
     \fi
@@ -139,66 +139,79 @@
 
 %-----------PROGRAMMING SKILLS-----------
 \section{TECHNICAL SKILLS}
- \begin{itemize}[leftmargin=0in, label={}]
+\begin{itemize}[leftmargin=0in, label={}]
     \small{\item{
-    \textbf{General Experience}{: Data Structures, Algorithms, Databases, Git, Maven, Azure, SOAP, REST, Jira.}\\
-     \textbf{Languages}{: Java, Javascript, Python, Dart, C, Powershell, Bash.} \\
-     \textbf{Frameworks}{: React.js, Flutter, FastAPI, Vue.js, Sails.js.}\\
-     \textbf{Operating Systems}{: MacOS, Windows, Linux, Android.}
+            \textbf{General Experience}{: Data Structures, Algorithms, Databases, Git, Maven, Azure, SOAP, REST, Jira.}\\
+            \textbf{Languages}{: Java, Javascript, Python, Dart, C, Powershell, Bash.} \\
+            \textbf{Frameworks}{: React.js, Flutter, FastAPI, Vue.js, Sails.js.}\\
+            \textbf{Operating Systems}{: MacOS, Windows, Linux, Android.}
     }}
- \end{itemize}
- 
- %-----------EDUCATION-----------
+\end{itemize}
+
+%-----------EDUCATION-----------
 \section {EDUCATION}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Western Washington University (WWU)}{September 2016 -- December 2021}
-      {Bachelor of Science in Computer Science, Minor in Communication Studies}{Bellingham, WA} 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheading
+{Western Washington University (WWU)}{September 2016 -- December 2021}
+{Bachelor of Science in Computer Science, Minor in Communication Studies}{Bellingham, WA} 
+\resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{EXPERIENCE}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-      {Heritage Bank Northwest}{July 2022 -- January 2024}
-      {Software Developer I}{Burlington, WA}
-     \resumeItemListStart
-        \resumeItem{Collaborated with banking analysts to implement features and resolve bugs in Heritage Bank Northwest's banking relationship and treasury management applications.}
-        \resumeItem{Integrated Bottomline SOAP API to automate onboarding Treasury Management products for customers, eliminating on average 111 clicks per product and reducing the implementation lead time by 50\%.}
-        \resumeItem{Spearheaded an 80\% reduction in integration time for new services within the Treasury Management application by eliminating hard-coded values and introducing a database-dependent solution.}
-        \resumeItem{Designed, developed, and tested an interactive application that displays a visual diff of code changes using React.js components to streamline the code review process, enabling both developers and non-developers to quickly identify and review changes made while working on a ticket.}
-        \resumeItem{Refactored existing REST API in the Java back-end server to improve code quality, and implemented new features to existing API.}
-     \resumeItemListEnd
+\resumeSubheading
+{Heritage Bank Northwest}{July 2022 -- January 2024}
+{Software Developer I}{Burlington, WA}
+\resumeItemListStart
+\resumeItem{Collaborated with banking analysts to implement features and resolve bugs in Heritage Bank Northwest's banking relationship and treasury management applications.}
+\resumeItem{Integrated Bottomline SOAP API to automate onboarding Treasury Management products for customers, eliminating on average 111 clicks per product and reducing the implementation lead time by 50\%.}
+\resumeItem{Spearheaded an 80\% reduction in integration time for new services within the Treasury Management application by eliminating hard-coded values and introducing a database-dependent solution.}
+\resumeItem{Designed, developed, and tested an interactive application that displays a visual diff of code changes using React.js components to streamline the code review process, enabling both developers and non-developers to quickly identify and review changes made while working on a ticket.}
+\resumeItem{Refactored existing REST API in the Java back-end server to improve code quality, and implemented new features to existing API.}
+\resumeItemListEnd
 
-    \resumeSubheading
-      {Viking Union (VU), Western Washington University}{June 2019 -- December 2021}
-      {Computer Maintenance Technician}{Bellingham, WA}
-      \resumeItemListStart
-        \resumeItem{Acted as the sole on-site technician providing in-person and remote support during COVID-19 lockdown.}
-        \resumeItem{Deployed software and hardware to machines and over 50 offices located throughout the Viking Union.}
-        \resumeItem{Replaced the 3tb shared network drive used by over 200 VU employees with a new 100tb Synology NAS Device.}
-        \resumeItem{Researched, tested, and deployed a single-application kiosk to the VU information desk using Windows 10, PowerShell, Internet Explorer 11, and local group policy configuration.}
-        \resumeItem{Created Bash shell scripts to automate the wiping and reformatting of recovered USB drives in the VU’s lost and found.}
-      \resumeItemListEnd
+\resumeSubheading
+{Viking Union (VU), Western Washington University}{June 2019 -- December 2021}
+{Computer Maintenance Technician}{Bellingham, WA}
+\resumeItemListStart
+\resumeItem{Acted as the sole on-site technician providing in-person and remote support during COVID-19 lockdown.}
+\resumeItem{Deployed software and hardware to machines and over 50 offices located throughout the Viking Union.}
+\resumeItem{Replaced the 3tb shared network drive used by over 200 VU employees with a new 100tb Synology NAS Device.}
+\resumeItem{Researched, tested, and deployed a single-application kiosk to the VU information desk using Windows 10, PowerShell, Internet Explorer 11, and local group policy configuration.}
+\resumeItem{Created Bash shell scripts to automate the wiping and reformatting of recovered USB drives in the VU’s lost and found.}
+\resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 
 \section{PROJECTS}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-      {\textbf{Accessibility Testing Automation Application} -- Sails.js, Vue.js, Selenium, Python, Deque aXe API}{January 2021 -- Present}
-          \resumeItemListStart
-            \resumeItem{Led a team of 4 in the development of a full-stack accessibility checking application for Wandke Consulting -- an accessibility consulting company in Bellingham, WA.}
-            \resumeItem{Acted as the point of contact between the development team and the client.}
-            \resumeItem{Facilitated code reviews for new features and gave feedback to team members.}
-            \resumeItem{Utilized Deque Labs’ aXe accessibility API and Selenium Webdriver to scan websites and test for over 350 Web Content Accessibility Guideline (WCAG) violations.}
-            \resumeItem{Implemented API routes in the Sails.js backend and integrated a custom Python web crawler.}
-          \resumeItemListEnd
+\resumeSubHeadingListStart
+    \resumeProjectHeading{\textbf{Bellingham Rental Reviews} -- Next.js, Typescript, NoSQL, Python, Selenium}{February 2024 -- Present}
+    \resumeItemListStart
+        \resumeItem{Designed a custom web scraper using Python and Selenium to gather information from Yelp and Google on over 200 property management companies and apartment complexes in the Bellingham, Washington area.}
+        \resumeItem{Extracted and unified data into JSON format, merging website data and adjusting review metrics for clarity and consistency.}
+        \resumeItem{Utilized OpenAI to analyze JSON data and generate markdown articles for each entity, enriching data insights and presentation.}
+        \resumeItem{Created an accessible website using Next.js to showcase AI-generated reviews, stored in Firebase NoSQL database.}
+    \resumeItemListEnd
 
-    \resumeSubHeadingListEnd
+    \resumeProjectHeading{\textbf{Accessibility Testing Automation Application} -- Sails.js, Vue.js, Selenium, Python, Deque aXe API}{January 2021 -- Present}
+    \resumeItemListStart
+        \resumeItem{Led a team of 4 in the development of a full-stack accessibility checking application for Wandke Consulting -- an accessibility consulting company in Bellingham, WA.}
+        \resumeItem{Facilitated code reviews for new features and gave feedback to team members.}
+        \resumeItem{Utilized Deque Labs’ aXe accessibility API and Selenium Webdriver to scan websites and test for over 350 Web Content Accessibility Guideline (WCAG) violations.}
+        \resumeItem{Implemented REST API routes in the Sails.js backend and integrated a custom Python web crawler.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading{\textbf{ReLeave} -- Flutter, SQLite}{January 2021 - March 2021}  
+    \resumeItemListStart
+        \resumeItem{Led a team of 4 in the development of a cross-platform mobile application to assist people going through cannabis use disorder recovery.}
+        \resumeItem{Conducted research, and interviewed Substance Use Disorder specialists with Sea-Mar Community Health Centers to develop a list of functional requirements.}
+        \resumeItem{Integrated Reddit API using the Dart Reddit API Wrapper (DRAW) to interact with over 200,000 users on the /r/Leaves subreddit.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 \end{document}
