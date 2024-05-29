@@ -14,6 +14,7 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
+\usepackage{needspace}
 
 % fontawesome
 \usepackage{fontawesome}
@@ -137,24 +138,22 @@
     \\ \vspace{-3pt}
 \end{center}
 
+
+%------------------SUMMARY-----------------------
+\section{SUMMARY}
+Tenacious, detail-oriented software engineer with a knack for developing innovative solutions, and a passion for solving problems. During my tenure at Heritage Bank NW, I developed user-friendly, accessible solutions that bridged critical gaps in our software development lifecycle and business workflows. Highlights include developing an interactive code review utility, a scalable system for efficient PDF tracking and management, and a A VNC server solution that seamlessly replicates an in-person pair programming experience for remote developers by providing real-time, collaborative coding sessions with synchronized views and interactive control sharing.
+
+
 %-----------PROGRAMMING SKILLS-----------
 \section{TECHNICAL SKILLS}
 \begin{itemize}[leftmargin=0in, label={}]
     \small{\item{
-            \textbf{General Experience}{: Data Structures, Algorithms, SQL, noSQL, Git, CI/CD, Docker, Maven, Azure, SOAP, REST.}\\
+            \textbf{General Experience}{: Data Structures, Algorithms, SQL, NoSQL, Git, CI/CD, Docker, Maven, Azure, SOAP, REST.}\\
             \textbf{Languages}{: Java, Javascript, Typescript, Python, Dart, C, Powershell, Bash.} \\
             \textbf{Frameworks}{: React.js, Vue.js, Node.js, Sails.js, Next.js, Flutter, FastAPI.}\\
             \textbf{Operating Systems}{: MacOS, Windows, Linux, Android.}
     }}
 \end{itemize}
-
-%-----------EDUCATION-----------
-\section {EDUCATION}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Western Washington University (WWU)}{September 2016 -- December 2021}
-{Bachelor of Science in Computer Science, Minor in Communication Studies}{Bellingham, WA} 
-\resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{EXPERIENCE}
@@ -186,13 +185,13 @@
 
 
 %-----------PROJECTS-----------
-
+\needspace{5in}
 \section{PROJECTS}
 \resumeSubHeadingListStart
     \resumeProjectHeading{\textbf{Bellingham Rental Reviews} -- Next.js, Typescript, NoSQL, Python, Selenium}{February 2024 -- Present}
     \resumeItemListStart
         \resumeItem{Designed a custom web scraper using Python and Selenium to gather information from Yelp and Google on over 200 property management companies and apartment complexes in the Bellingham, Washington area.}
-        \resumeItem{Extracted and unified data into JSON format, and adjusting review metrics for clarity and consistency.}
+        \resumeItem{Extracted and transformed data into JSON format, and adjusting review metrics for clarity and consistency.}
         \resumeItem{Utilized OpenAI to analyze JSON data and generate markdown articles for each entity, enriching data insights and presentation.}
         \resumeItem{Wrote documentation to outline the purpose of the project, as well as technical information on the scripts used to gather data.}
         \resumeItem{Created an accessible website using Next.js to showcase AI-generated reviews, stored in Firebase NoSQL database.}
@@ -209,7 +208,7 @@
     \resumeProjectHeading
       {\textbf{Web Content Accessibility Guideline (WCAG) Reference CJS} -- Javascript}{July 2021 - January 2022}
         \resumeItemListStart
-            \resumeItem{Forked and modified the NodeJS Package \"WCAG Reference\" to work as a CommonJS import.}
+            \resumeItem{Forked and modified the NodeJS Package "WCAG Reference" to work as a CommonJS import.}
             \resumeItem{Created a function to locate and return all WCAG success criterion of a given level (A-AAA).}
             \resumeItem{Upgraded the WCAG scrapers to include short and long descriptions of WCAG guidelines in the JSON output.}
             \resumeItem{Utilized Github Actions to deploy updates to Npmjs.com.}
@@ -221,7 +220,14 @@
         \resumeItem{Conducted research, and interviewed Substance Use Disorder specialists with Sea-Mar Community Health Centers to develop a list of functional requirements.}
         \resumeItem{Integrated Reddit API using the Dart Reddit API Wrapper (DRAW) to interact with over 200,000 users on the /r/Leaves subreddit.}
     \resumeItemListEnd
-
 \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading{Western Washington University (WWU)}{}
+{Bachelor of Science in Computer Science, Minor in Communication Studies}{Bellingham, WA} 
+\resumeSubHeadingListEnd
+
 
 \end{document}
