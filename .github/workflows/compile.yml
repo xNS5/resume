@@ -16,16 +16,6 @@ jobs:
       run: |
           git config --local user.email "actions@github.com"
           git config --local user.name actions-
-    - name: Get Resume Tex File Name
-      run: |
-          resume_file=$(find . -type f -name "*Resume.tex")
-          resume_tex_file=$(echo "$resume_file" | head -n 1)
-          echo "RESUME_FILE_NAME=$(basename $resume_tex_file .tex)" >> $GITHUB_ENV
-    - name: Modify For ATS Friendly Version
-      run: |
-          if [[ "${{ github.event.repository.name }}" != "resume" ]]; then
-            sed -i -e 's/\\disablesymbolfalse/\\disablesymboltrue/g' ${{env.RESUME_FILE_NAME}}.tex
-          fi
     - name: Compile Main TeX File
       uses: xu-cheng/latex-action@v3
       with:
