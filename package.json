@@ -1,0 +1,15 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "init": "resumed init",
+        "start": "resumed --theme jsonresume-theme-local"
+    },
+    "dependencies": {
+        "jsonresume-theme-local": "file:theme",
+        "resumed": "^4.0.0"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.9"
+    }
+}

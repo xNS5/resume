@@ -1,0 +1,119 @@
+{
+  "basics": {
+    "name": "Michael Kennedy",
+    "label": "Software Engineer",
+    "image": "",
+    "email": "michael@michaelkennedy.dev",
+    "phone": "(831) 917-9737",
+    "summary": "Tenacious and detail-oriented Software Engineer with experience in developing both front-end and back-end applications. Passionate about creating innovative, user-centric solutions. Renowned for excellent communication skills, building strong relationships with stakeholders, and advocating for accessible design. Highlights include developing a scalable PDF tracking solution, an intuitive user-friendly code review application, and an automated website accessibility evaluation utility. Committed to fostering a supportive culture of cross-team collaboration and professional excellence.",
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "xNS5",
+        "url": "https://github.com/xNS5"
+      },
+      {
+        "network": "Linkedin",
+        "username": "mw-kennedy",
+        "url": "https://linkedin.com/in/mw-kennedy"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Heritage Bank NW",
+      "position": "Software Developer I",
+      "startDate": "2022-07",
+      "endDate": "2024-01",
+      "highlights": [
+        "Collaborated with banking analysts to implement features and resolve bugs in Heritage Bank Northwest’s banking relationship and treasury management applications",
+        "Integrated Bottomline SOAP API to automate onboarding Treasury Management products for customers, eliminating on average 111 clicks per product and reducing the implementation lead time by 50%",
+        "Spearheaded an 80% reduction in integration time for new services within the Treasury Management application by eliminating hard-coded values and introducing a database-dependent solution",
+        "Designed, developed, and tested an interactive application that displays a visual diff of code changes using React.js components to streamline the code review process, enabling both developers and non-developers to quickly identify and review changes made while working on a ticket",
+        "Refactored existing REST API in the Java back-end server to improve code quality, and implemented new features to existing API"
+      ]
+    },
+    {
+      "name": "Viking Union (VU), Western Washington University",
+      "position": "Computer Maintenance Technician",
+      "startDate": "2022-07",
+      "endDate": "2024-01",
+      "highlights": [
+        "Acted as the sole on-site technician providing in-person and remote support during COVID-19 lockdown",
+        "Deployed software and hardware to machines and over 50 offices located throughout the Viking Union",
+        "Replaced the 3tb shared network drive used by over 200 VU employees with a new 100tb Synology NAS Device",
+        "Researched, tested, and deployed a single-application kiosk to the VU information desk using Windows 10, PowerShell, Internet Explorer 11, and local group policy configuration",
+        "Created Bash shell scripts to automate the wiping and reformatting of recovered USB drives in the VU’s lost and found"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Western Washington University",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science in",
+      "startDate": "2016",
+      "endDate": "2021"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Bellingham Rental Reviews",
+      "description": "Next.js, Typescript, MongoDB, Firebase, Python, Selenium",
+      "startDate": "2024-02",
+      "highlights": [
+        "Designed a custom web scraper using Python and Selenium to gather information from Yelp and Google on over 200 property management companies and apartment complexes in the Bellingham, Washington area",
+        "Extracted and unified data into JSON format, and adjusting review metrics for clarity and consistency",
+        "Utilized OpenAI to analyze JSON data and generate markdown articles for each entity, enriching data insights and presentation",
+        "Wrote documentation to outline the purpose of the project, as well as technical information on the scripts used to gather data",
+        "Created an accessible website using Next.js to showcase AI-generated reviews, stored in Firebase NoSQL database"
+      ]
+    },
+    {
+      "name": "Accessibility Testing Automation Application",
+      "description":"Sails.js, Vue.js, Selenium, Python, Deque aXe API",
+      "startDate": "2021-02",
+      "endDate": "2022-01",
+      "highlights": [
+        "Designed a custom web scraper using Python and Selenium to gather information from Yelp and Google on over 200 property management companies and apartment complexes in the Bellingham, Washington area",
+        "Extracted and unified data into JSON format, and adjusting review metrics for clarity and consistency",
+        "Utilized OpenAI to analyze JSON data and generate markdown articles for each entity, enriching data insights and presentation",
+        "Wrote documentation to outline the purpose of the project, as well as technical information on the scripts used to gather data",
+        "Created an accessible website using Next.js to showcase AI-generated reviews, stored in Firebase NoSQL database"
+      ]
+    },
+    {
+      "name": "Web Content Accessibility Guideline (WCAG) Reference CJS",
+      "description": "Javascript",
+      "startDate": "2021-02",
+      "endDate": "2022-01",
+      "highlights": [
+        "Forked and modified the NodeJS Package \"WCAG Reference\" to work as a CommonJS import",
+            "Created a function to locate and return all WCAG success criterion of a given level (A-AAA)",
+            "Upgraded the WCAG scrapers to include short and long descriptions of WCAG guidelines in the JSON output",
+            "Utilized Github Actions to deploy updates to Npmjs.com"
+      ]
+    },
+    {
+      "name": "ReLeave",
+      "description": "Flutter, SQLite",
+      "startDate": "2021-02",
+      "endDate": "2022-01",
+      "highlights": [
+        "Led a team of 4 in the development of a cross-platform mobile application to assist people going through cannabis use disorder recovery",
+        "Conducted research, and interviewed Substance Use Disorder specialists with Sea-Mar Community Health Centers to develop a list of functional requirements",
+        "Integrated Reddit API using the Dart Reddit API Wrapper (DRAW) to interact with over 200,000 users on the /r/Leaves subreddit"
+      ]
+    }
+  ]
+}
