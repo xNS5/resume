@@ -11,7 +11,7 @@ body {
   }
 
 h1 {
-    font-size: 2em; 
+    font-size: 2.5em; 
 }
 
 h2 {
@@ -59,19 +59,21 @@ a {
         margin: 0;
     }
 
-    #contact li {
-        padding: 2px;
-        margin: 2px;
+    #contact li {        
+        margin: 0 0.2rem 0 0.2rem;
+        font-size: 0.8rem;
     }
     
-    #contact li:not(:last-child):after {
-        content: " | "
+    #contact li:not(:last-child) {
+        margin-right: 1rem;
+        padding-right: 1rem;
+        border-right: 2px solid;
     }
 
 }
 
 .main-section{
-    
+    margin: 1rem 0 1rem 0;
     page-break-inside: avoid;
 
     h2 {
@@ -84,16 +86,21 @@ a {
         border-bottom: 2px solid grey;
         width: 100%;
     }
+
+    li {
+            line-height: 1.5;
+        }
 }
 
 ol {
     list-style: none;
-    padding-left: 0;
-    
+    padding: 0;
+    margin: 0;
+
     ol {
+        padding: 0;
         list-style: disc;
     }
-
     p {
         margin: 0;
         padding: 0;
@@ -106,14 +113,12 @@ ol {
     grid-template-rows: repeat(1, 1fr);
     grid-column-gap: 0;
     grid-row-gap: 0;
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.25rem 0 0.5rem 0;
+    white-space: nowrap;
 
-    h3, h5 {
+    h3 {
         margin: 0;
         padding: 0;
-    }
-    h5 {
-        font-weight: normal
     }
 
     .header-1 {
@@ -128,6 +133,7 @@ ol {
         text-align: end;
     }
 }
+
 
 
 .highlights {

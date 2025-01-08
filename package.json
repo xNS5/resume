@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "init": "resumed init",
-        "start": "resumed --theme jsonresume-theme-local -o Resume.html",
+        "start": "resumed --theme jsonresume-theme-local -o MichaelKennedy_Resume.html",
         "start-pdf": "node index.js"
     },
     "dependencies": {

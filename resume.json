@@ -20,7 +20,7 @@
   "work": [
     {
       "name": "Heritage Bank NW",
-      "position": "Software Developer I",
+      "position": "Software Developer 1",
       "location": "Burlington, WA",
       "startDate": "June 2022",
       "endDate": "January 2024",
@@ -80,7 +80,7 @@
       "highlights": [
         "Designed a custom web scraper using Python and Selenium to gather information from Yelp and Google on over 200 property management companies and apartment complexes in the Bellingham, Washington area",
         "Extracted and unified data into JSON format, and adjusting review metrics for clarity and consistency",
-        "Utilized OpenAI to analyze JSON data and generate markdown articles for each entity, enriching data insights and presentation",
+        "Utilized OpenAI to analyze JSON data and generate HTML articles for each entity, enriching data insights and presentation",
         "Wrote documentation to outline the purpose of the project, as well as technical information on the scripts used to gather data",
         "Created an accessible website using Next.js to showcase AI-generated reviews, stored in Firebase NoSQL database"
       ]
@@ -91,11 +91,10 @@
       "startDate": "July 2021",
       "endDate": "January 2022",
       "highlights": [
-        "Designed a custom web scraper using Python and Selenium to gather information from Yelp and Google on over 200 property management companies and apartment complexes in the Bellingham, Washington area",
-        "Extracted and unified data into JSON format, and adjusting review metrics for clarity and consistency",
-        "Utilized OpenAI to analyze JSON data and generate markdown articles for each entity, enriching data insights and presentation",
-        "Wrote documentation to outline the purpose of the project, as well as technical information on the scripts used to gather data",
-        "Created an accessible website using Next.js to showcase AI-generated reviews, stored in Firebase NoSQL database"
+      "Led a team of 4 in the development of a full-stack accessibility checking application for Wandke Consulting -- an accessibility consulting company in Bellingham, WA",
+      "Facilitated code reviews for new features and gave feedback to team members",
+      "Utilized Deque Labs aXe accessibility API and Selenium Webdriver to scan websites and test for over 350 Web Content Accessibility Guideline (WCAG) violations",
+      "Implemented REST API routes in the Sails.js backend and integrated a custom Python web crawler"
       ]
     },
     {
