@@ -51,26 +51,32 @@
     {
       "institution": "Western Washington University",
       "area": "Computer Science",
-      "studyType": "Bachelor of Science in",
-      "startDate": "2016",
-      "endDate": "2021"
+      "studyType": "Bachelor of Science",
+      "minor": "Communication Studies",
+      "location": "Bellingham, WA",
+      "startDate": "September 2016",
+      "endDate": "December 2021"
     }
   ],
   "skills": [
     {
-      "name": "Web Development",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ]
+      "name": "General Experience",
+      "highlights": ["Data Structures", "Algorithms", "Databases (SQL and noSQL)", "Git", "CI/CD", "Docker", "Maven", "Azure", "SOAP", "REST"]
+    },
+    {
+      "name": "Languages",
+      "highlights": ["Java", "Javascript", "Typescript", "Python", "Powershell", "Bash"]
+    },
+    {
+      "name": "Frameworks",
+      "highlights": ["React.js", "Node.js", "Next.js", "Flutter", "Django", "FastAPI", "Flask"]
     }
   ],
   "projects": [
     {
       "name": "Bellingham Rental Reviews",
-      "description": "Next.js, Typescript, MongoDB, Firebase, Python, Selenium",
-      "startDate": "2024-02",
+      "technologies": ["Next.js", "Typescript", "MongoDB", "Firebase", "Python", "Selenium"],
+      "startDate": "February 2024",
       "highlights": [
         "Designed a custom web scraper using Python and Selenium to gather information from Yelp and Google on over 200 property management companies and apartment complexes in the Bellingham, Washington area",
         "Extracted and unified data into JSON format, and adjusting review metrics for clarity and consistency",
@@ -81,9 +87,9 @@
     },
     {
       "name": "Accessibility Testing Automation Application",
-      "description":"Sails.js, Vue.js, Selenium, Python, Deque aXe API",
-      "startDate": "2021-02",
-      "endDate": "2022-01",
+      "technologies":["Sails.js", "Vue.js", "Selenium", "Python", "Deque aXe API"],
+      "startDate": "July 2021",
+      "endDate": "January 2022",
       "highlights": [
         "Designed a custom web scraper using Python and Selenium to gather information from Yelp and Google on over 200 property management companies and apartment complexes in the Bellingham, Washington area",
         "Extracted and unified data into JSON format, and adjusting review metrics for clarity and consistency",
@@ -94,9 +100,9 @@
     },
     {
       "name": "Web Content Accessibility Guideline (WCAG) Reference CJS",
-      "description": "Javascript",
-      "startDate": "2021-02",
-      "endDate": "2022-01",
+      "technologies": ["Javascript"],
+      "startDate": "July 2021",
+      "endDate": "January 2022",
       "highlights": [
         "Forked and modified the NodeJS Package \"WCAG Reference\" to work as a CommonJS import",
             "Created a function to locate and return all WCAG success criterion of a given level (A-AAA)",
@@ -106,9 +112,9 @@
     },
     {
       "name": "ReLeave",
-      "description": "Flutter, SQLite",
-      "startDate": "2021-02",
-      "endDate": "2022-01",
+      "technologies": ["Flutter", "Sqlite"],
+      "startDate": "January 2021",
+      "endDate": "March 2021",
       "highlights": [
         "Led a team of 4 in the development of a cross-platform mobile application to assist people going through cannabis use disorder recovery",
         "Conducted research, and interviewed Substance Use Disorder specialists with Sea-Mar Community Health Centers to develop a list of functional requirements",

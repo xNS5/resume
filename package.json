@@ -7,7 +7,6 @@
         "start-pdf": "node index.js"
     },
     "dependencies": {
-        "html2pdf.js": "^0.10.2",
         "jsonresume-theme-local": "file:theme",
         "puppeteer": "^23.11.1",
         "resumed": "^4.0.0"
