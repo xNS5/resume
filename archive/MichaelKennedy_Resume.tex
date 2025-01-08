@@ -7,13 +7,13 @@
 
 \documentclass[letterpaper,11pt]{article}
 \usepackage[pdflang={en-GB}]{hyperref}
-\usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
+
+\usepackage{pgffor}
+\usepackage{needspace}
 
 % fontawesome
 \usepackage{fontawesome}
@@ -60,10 +60,6 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting - serif
-% \titleformat{\section}{
-%   \vspace{2pt} \scshape \raggedright\large % header section
-% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
 
 % sans serif sections
 \titleformat {\section}{
@@ -78,14 +74,16 @@
         }
     }
 
+    %Subheading
     \newcommand{\resumeSubheading}[4]{
         \vspace{-1pt}\item
         \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-            \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
-            \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+            \textbf{\large #1} & {\small #2}\vspace{1pt}\\ % top row of resume entry
+            \textit{#3} & {\small #4}\\ % second row of resume entry
         \end{tabular*}\vspace{-4pt}
     }
 
+    %SubSubheading
     \newcommand{\resumeSubSubheading}[2]{
     \item
         \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
@@ -93,12 +91,17 @@
         \end{tabular*}\vspace{-7pt}
     }
 
-    \newcommand{\resumeProjectHeading}[2]{
-    \item
-        \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-            \textit{\small#1} & {\color{dark-grey}\small #2}\vspace{2pt} \\
-        \end{tabular*}\vspace{-5pt}
+    % Project Heading
+    \newcommand{\resumeProjectHeading}[3]{
+    \item{
+            \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+                \textbf{\large #1} & {\small #3}\vspace{1pt}\\
+                \textit{\small#2}\\
+        \end{tabular*}
+        \vspace{-1em}
     }
+
+}
 
     \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
@@ -109,32 +112,26 @@
     \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
     \newcommand{\resumeItemListStart}{\begin{itemize}}
     \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
-
-    \newif\ifdisablesymbol
-    \disablesymbolfalse
-
-    \newcommand{\rendericon}[1]{%
-        \ifdisablesymbol
-            %
-    \else
-        #1
-    \fi
-}
+    
+    %Contact Item
+    \newcommand{\contactinfo}[1]{
+        \item[] \small{#1\hspace{1pt}}
+    }
 
 
 \color{text-grey}
 \begin{document}
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------HEADING----------
-{\begin{center}
-    \textbf{\Huge Michael Kennedy} \\ \vspace{5pt}
-    \small \rendericon{\faPhone\hspace{2pt}}831.917.9737 \hspace{1pt} $|$
-    \hspace{1pt} \rendericon{\faEnvelope\hspace{2pt} }\href{mailto:michael@michaelkennedy.dev}{michael@michaelkennedy.dev} \hspace{1pt} $|$ 
-    \hspace{1pt} \rendericon{\faLinkedinSquare\hspace{2pt}} \href{https://www.linkedin.com/in/mw-kennedy}{linkedin.com/in/mw-kennedy} \hspace{1pt}$|$
-    \hspace{1pt} \rendericon{\faGithubSquare\hspace{2pt}} \href{https://github.com/xNS5}{github.com/xNS5}
-    \\ \vspace{-3pt}
+\begin{center}
+\textbf{\Huge{Michael Kennedy}} \\
+\vspace{1em}
+\begin{itemize*}
+    \contactinfo{(831) 917-9737} $|$
+    \contactinfo{\href{mailto:michael@michaelkennedy.dev}{michael@michaelkennedy.dev}} $|$
+    \contactinfo{\href{https://www.linkedin.com/in/mw-kennedy}{linkedin.com/in/mw-kennedy}} $|$
+    \contactinfo{\href{https://github.com/xNS5}{github.com/xNS5}}
+\end{itemize*}
+\vspace{-1em}
 \end{center}
 }
 
@@ -150,13 +147,9 @@
     }}
 \end{itemize}
 
-%-----------EDUCATION-----------
-\section {EDUCATION}
-\resumeSubHeadingListStart
-\resumeSubheading
-{Western Washington University (WWU)}{September 2016 -- December 2021}
-{Bachelor of Science in Computer Science, Minor in Communication Studies}{Bellingham, WA} 
-\resumeSubHeadingListEnd
+%------------------SUMMARY-----------------------
+\section{SUMMARY}
+Tenacious and detail-oriented Software Engineer with experience in developing both front-end and back-end applications. Passionate about creating innovative, user-centric solutions. Renowned for excellent communication skills, building strong relationships with stakeholders, and advocating for accessible design. Highlights include developing a scalable PDF tracking solution, an intuitive user-friendly code review application, and an automated website accessibility evaluation utility. Committed to fostering a supportive culture of cross-team collaboration and professional excellence. 
 
 %-----------EXPERIENCE-----------
 \section{EXPERIENCE}
@@ -183,24 +176,33 @@
 \resumeItem{Researched, tested, and deployed a single-application kiosk to the VU information desk using Windows 10, PowerShell, Internet Explorer 11, and local group policy configuration.}
 \resumeItem{Created Bash shell scripts to automate the wiping and reformatting of recovered USB drives in the VU’s lost and found.}
 \resumeItemListEnd
-
 \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0in, label={}]
+     \setlength\itemsep{-0.5em}  
+        \item \textbf{General Experience}{: Data Structures, Algorithms, Databases (SQL and NoSQL), Git, CI/CD, Docker, Maven, Azure, SOAP, REST.}
+        \item \textbf{Languages}{: Java, Javascript, Typescript, Python, Dart, C\#, Powershell, Bash.} 
+        \item \textbf{Frameworks}{: React.js, Node.js, Next.js, Flutter, Django, FastAPI, Flask.}
+\end{itemize}
+
 
 
 %-----------PROJECTS-----------
-
+\needspace{5in}
 \section{PROJECTS}
-\resumeSubHeadingListStart
-    \resumeProjectHeading{\textbf{Bellingham Rental Reviews} -- Next.js, Typescript, NoSQL, Python, Selenium}{February 2024 -- Present}
+\resumeSubHeadingListStart 
+\resumeProjectHeading{Bellingham Rental Reviews}{Next.js, Typescript, NoSQL, Python, Selenium}{February 2024 -- Present}
     \resumeItemListStart
         \resumeItem{Designed a custom web scraper using Python and Selenium to gather information from Yelp and Google on over 200 property management companies and apartment complexes in the Bellingham, Washington area.}
-        \resumeItem{Extracted and unified data into JSON format, and adjusting review metrics for clarity and consistency.}
+        \resumeItem{Extracted and transformed data into JSON format, and adjusting review metrics for clarity and consistency.}
         \resumeItem{Utilized OpenAI to analyze JSON data and generate markdown articles for each entity, enriching data insights and presentation.}
         \resumeItem{Wrote documentation to outline the purpose of the project, as well as technical information on the scripts used to gather data.}
         \resumeItem{Created an accessible website using Next.js to showcase AI-generated reviews, stored in Firebase NoSQL database.}
     \resumeItemListEnd
 
-    \resumeProjectHeading{\textbf{Accessibility Testing Automation Application} -- Sails.js, Vue.js, Selenium, Python, Deque aXe API}{July 2021 -- January 2022}
+    \resumeProjectHeading{Accessibility Testing Automation Application}{Sails.js, Vue.js, Selenium, Python, Deque aXe API}{July 2021 -- January 2022}
     \resumeItemListStart
         \resumeItem{Led a team of 4 in the development of a full-stack accessibility checking application for Wandke Consulting -- an accessibility consulting company in Bellingham, WA.}
         \resumeItem{Facilitated code reviews for new features and gave feedback to team members.}
@@ -208,16 +210,15 @@
         \resumeItem{Implemented REST API routes in the Sails.js backend and integrated a custom Python web crawler.}
     \resumeItemListEnd
 
-    \resumeProjectHeading
-      {\textbf{Web Content Accessibility Guideline (WCAG) Reference CJS} -- Javascript}{July 2021 - January 2022}
+    \resumeProjectHeading{Web Content Accessibility Guideline (WCAG) Reference CJS}{Javascript}{July 2021 - January 2022}
         \resumeItemListStart
-            \resumeItem{Forked and modified the NodeJS Package \"WCAG Reference\" to work as a CommonJS import.}
+            \resumeItem{Forked and modified the NodeJS Package "WCAG Reference" to work as a CommonJS import.}
             \resumeItem{Created a function to locate and return all WCAG success criterion of a given level (A-AAA).}
             \resumeItem{Upgraded the WCAG scrapers to include short and long descriptions of WCAG guidelines in the JSON output.}
             \resumeItem{Utilized Github Actions to deploy updates to Npmjs.com.}
           \resumeItemListEnd
 
-    \resumeProjectHeading{\textbf{ReLeave} -- Flutter, SQLite}{January 2021 - March 2021}  
+  \resumeProjectHeading{ReLeave}{Flutter, SQLite}{January 2021 - March 2021}  
     \resumeItemListStart
         \resumeItem{Led a team of 4 in the development of a cross-platform mobile application to assist people going through cannabis use disorder recovery.}
         \resumeItem{Conducted research, and interviewed Substance Use Disorder specialists with Sea-Mar Community Health Centers to develop a list of functional requirements.}
@@ -225,5 +226,13 @@
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+\resumeSubHeadingListStart
+\resumeSubheading{Western Washington University (WWU)}{}
+{Bachelor of Science in Computer Science, Minor in Communication Studies}{Bellingham, WA} 
+\resumeSubHeadingListEnd
+
 
 \end{document}
