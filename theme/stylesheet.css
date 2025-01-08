@@ -1,11 +1,13 @@
-body {
-    width: 8.5in;
-    height: 11in;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
+@page {
+    size: letter;
+    margin: 0.25in;
     line-height: 1.5;
-    margin: 1em;
+    
+  }
+
+body {
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
   }
 
 h1 {
@@ -48,7 +50,7 @@ a {
     }
 
     #contact {
-        font-size: 0.875em;
+        font-size: 0.8rem;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -69,6 +71,9 @@ a {
 }
 
 .main-section{
+    
+    page-break-inside: avoid;
+
     h2 {
         font-size: 1.17em;
         text-align: start;
@@ -76,7 +81,7 @@ a {
         display: block;
         padding: 0;
         margin: 0;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid grey;
         width: 100%;
     }
 }

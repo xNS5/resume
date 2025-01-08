@@ -11,5 +11,6 @@ const browser = await puppeteer.launch()
 const page = await browser.newPage()
 
 await page.setContent(html, { waitUntil: 'networkidle0' })
-await page.pdf({ path: 'resume.pdf', format: 'Letter', printBackground: true })
+await page.addStyleTag({path: "theme/stylesheet.css"})
+await page.pdf({ path: `${resume.basics.name.replace(" ", '')}_Resume.pdf`, format: 'Letter', printBackground: false })
 await browser.close()

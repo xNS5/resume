@@ -3,15 +3,12 @@
     "type": "module",
     "scripts": {
         "init": "resumed init",
-        "start": "resumed --theme jsonresume-theme-local",
+        "start": "resumed --theme jsonresume-theme-local -o Resume.html",
         "start-pdf": "node index.js"
     },
     "dependencies": {
-        "jsonresume-theme-local": "file:theme",
+        "jsonresume-theme-local": "file:./theme",
         "puppeteer": "^23.11.1",
         "resumed": "^4.0.0"
-    },
-    "devDependencies": {
-        "nodemon": "^3.1.9"
     }
 }
