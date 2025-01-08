@@ -3,7 +3,7 @@ name: Compile LaTeX Resume and Push To GH Pages
 on:
   push:
     branches: ['main']
-    paths: ['resume.json', '']
+    paths: ['resume.json']
   workflow_dispatch:
 
 jobs:
@@ -16,11 +16,14 @@ jobs:
       run: |
           git config --local user.email "actions@github.com"
           git config --local user.name actions
-    - name: Install Dependencies 
-      uses: actions/@setup-node@v4
+
+    - name: Use Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: 20
-    - run: |
+        node-version: '20.17'
+
+    - name: Build Resume PDF
+      run: |
         npm ci
         npm run start-pdf
 
