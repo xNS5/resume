@@ -1,21 +1,19 @@
 {
   "basics": {
     "name": "Michael Kennedy",
-    "label": "Software Engineer",
-    "image": "",
     "email": "michael@michaelkennedy.dev",
     "phone": "(831) 917-9737",
     "summary": "Tenacious and detail-oriented Software Engineer with experience in developing both front-end and back-end applications. Passionate about creating innovative, user-centric solutions. Renowned for excellent communication skills, building strong relationships with stakeholders, and advocating for accessible design. Highlights include developing a scalable PDF tracking solution, an intuitive user-friendly code review application, and an automated website accessibility evaluation utility. Committed to fostering a supportive culture of cross-team collaboration and professional excellence.",
     "profiles": [
       {
-        "network": "Github",
-        "username": "xNS5",
-        "url": "https://github.com/xNS5"
+        "network": "Linkedin",
+        "display_name": "linkedin.com/in/mw-kennedy",
+        "url": "https://linkedin.com/in/mw-kennedy"
       },
       {
-        "network": "Linkedin",
-        "username": "mw-kennedy",
-        "url": "https://linkedin.com/in/mw-kennedy"
+        "network": "Github",
+        "display_name": "github.com/xNS5",
+        "url": "https://github.com/xNS5"
       }
     ]
   },
@@ -23,8 +21,9 @@
     {
       "name": "Heritage Bank NW",
       "position": "Software Developer I",
-      "startDate": "2022-07",
-      "endDate": "2024-01",
+      "location": "Burlington, WA",
+      "startDate": "June 2022",
+      "endDate": "January 2024",
       "highlights": [
         "Collaborated with banking analysts to implement features and resolve bugs in Heritage Bank Northwest’s banking relationship and treasury management applications",
         "Integrated Bottomline SOAP API to automate onboarding Treasury Management products for customers, eliminating on average 111 clicks per product and reducing the implementation lead time by 50%",
@@ -36,8 +35,9 @@
     {
       "name": "Viking Union (VU), Western Washington University",
       "position": "Computer Maintenance Technician",
-      "startDate": "2022-07",
-      "endDate": "2024-01",
+      "location": "Bellingham, WA",
+      "startDate": "June 2019",
+      "endDate": "December 2021",
       "highlights": [
         "Acted as the sole on-site technician providing in-person and remote support during COVID-19 lockdown",
         "Deployed software and hardware to machines and over 50 offices located throughout the Viking Union",

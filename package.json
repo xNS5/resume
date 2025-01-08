@@ -3,10 +3,13 @@
     "type": "module",
     "scripts": {
         "init": "resumed init",
-        "start": "resumed --theme jsonresume-theme-local"
+        "start": "resumed --theme jsonresume-theme-local",
+        "start-pdf": "node index.js"
     },
     "dependencies": {
+        "html2pdf.js": "^0.10.2",
         "jsonresume-theme-local": "file:theme",
+        "puppeteer": "^23.11.1",
         "resumed": "^4.0.0"
     },
     "devDependencies": {
