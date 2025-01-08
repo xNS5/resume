@@ -1,4 +1,4 @@
-name: Compile LaTeX Resume and Push To GH Pages
+name: Compile JSON Resume and Push to GH Pages
 
 on:
   push:
