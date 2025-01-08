@@ -3,7 +3,7 @@ name: Compile LaTeX Resume and Push To GH Pages
 on:
   push:
     branches: ['main']
-    paths: ['*.tex']
+    paths: ['resume.json', '']
   workflow_dispatch:
 
 jobs:
@@ -15,24 +15,17 @@ jobs:
     - name: Setting Git User
       run: |
           git config --local user.email "actions@github.com"
-          git config --local user.name actions-
-    - name: Get Resume Tex File Name
-      run: |
-          resume_file=$(find . -type f -name "*Resume.tex")
-          resume_tex_file=$(echo "$resume_file" | head -n 1)
-          echo "RESUME_FILE_NAME=$(basename $resume_tex_file .tex)" >> $GITHUB_ENV
-    - name: Modify For ATS Friendly Version
-      run: |
-          if [[ "${{ github.event.repository.name }}" != "resume" ]]; then
-            sed -i -e 's/\\disablesymbolfalse/\\disablesymboltrue/g' ${{env.RESUME_FILE_NAME}}.tex
-          fi
-    - name: Compile Main TeX File
-      uses: xu-cheng/latex-action@v3
+          git config --local user.name actions
+    - name: Install Dependencies 
+      uses: actions/@setup-node@v4
       with:
-        root_file: ${{ env.RESUME_FILE_NAME }}.tex
-        post_compile: "latexmk -c"
+        node-version: 20
+      run: |
+        npm ci
+        npm run start-pdf
+
     - name: Push to pages branch
       run: |
-          git add --force \*.tex \*.pdf
+          git add --force \*.pdf
           git commit -m "$(git log -1 --pretty='%s')"
           git push $(git ls-remote --get-url origin) main:prod --force
