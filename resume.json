@@ -61,15 +61,15 @@
     "skills": [
         {
             "name": "General Experience",
-            "highlights": ["Data Structures", "Algorithms", "Databases (SQL and noSQL)", "Git", "CI/CD", "Docker", "Maven", "Azure", "SOAP", "REST"]
+            "highlights": [{"name": "Data Structures", "icon": "fas-laptop-code"}, {"name": "Algorithms", "icon": "fas-chart-diagram"}, {"name": "Databases (SQL and noSQL)", "icon": "fas-database" }, {"name": "Git", "icon": "fab-git-alt"}, {"name": "CI/CD", "icon": "fas-code-pull-request"}, {"name": "Docker", "icon": "fas-docker"}, {"name": "Maven", "icon": "fas-feather"}, {"name": "Azure", "icon":"fas-server"}, {"name": "SOAP", "icon": "far-file-code"}, {"name": "REST", "icon":"fas-circle-nodes"}]
         },
         {
             "name": "Languages",
-            "highlights": ["Java", "Javascript", "Typescript", "Python", "Powershell", "Bash"]
+            "highlights": [{"name": "Java", "icon":"fab-java"}, {"name":"Javascript/Typescript", "icon":"fab-js"},{"name":"Python", "icon":"fab-python"}]
         },
         {
             "name": "Frameworks",
-            "highlights": ["React.js", "Node.js", "Next.js", "Flutter", "Django", "FastAPI", "Flask"]
+            "highlights": [{"name": "React.js", "icon": "fab-react"}, {"name": "Node.js", "icon": "fab-node"}, {"name": "Next.js", "icon": "fab-node-js"}, {"name": "Flutter", "icon": "fab-flutter"}, {"name": "Django", "icon": "fab-python"}, {"name": "Flask/FastAPI", "icon":"fas-flask" }]
         }
     ],
     "projects": [

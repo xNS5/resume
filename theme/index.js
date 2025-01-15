@@ -61,7 +61,7 @@ exports.render = ({ basics, work, education, skills, projects }) => `
       <section id="technical-skills-section" class="main-section">
         <h2>TECHNICAL SKILLS</h2>
           <ol id="technical-skills-list">
-          ${skills.map((skill) => `<li><b>${skill.name}</b>: ${skill.highlights.join(", ")}</li>`).join("")}
+          ${skills.map((skill) => `<li><b>${skill.name}</b>: ${skill.highlights.map((hi) => hi.name).join(", ")}</li>`).join("")}
           </ol>
     </section>`
     }
