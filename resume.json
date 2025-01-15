@@ -61,7 +61,7 @@
     "skills": [
         {
             "name": "General Experience",
-            "highlights": [{"name": "Data Structures", "icon": "fas-laptop-code"}, {"name": "Algorithms", "icon": "fas-chart-diagram"}, {"name": "Databases (SQL and noSQL)", "icon": "fas-database" }, {"name": "Git", "icon": "fab-git-alt"}, {"name": "CI/CD", "icon": "fas-code-pull-request"}, {"name": "Docker", "icon": "fas-docker"}, {"name": "Maven", "icon": "fas-feather"}, {"name": "Azure", "icon":"fas-server"}, {"name": "SOAP", "icon": "far-file-code"}, {"name": "REST", "icon":"fas-circle-nodes"}]
+            "highlights": [{"name": "Data Structures", "icon": "fas-laptop-code"}, {"name": "Algorithms", "icon": "fas-chart-diagram"}, {"name": "Databases (SQL and noSQL)", "icon": "fas-database" }, {"name": "Git", "icon": "fab-git-alt"}, {"name": "CI/CD", "icon": "fas-code-pull-request"}, {"name": "Docker", "icon": "fas-fa-docker"}, {"name": "Maven", "icon": "fas-feather"}, {"name": "Azure", "icon":"fas-server"}, {"name": "SOAP", "icon": "far-file-code"}, {"name": "REST", "icon":"fas-circle-nodes"}]
         },
         {
             "name": "Languages",
