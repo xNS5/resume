@@ -65,7 +65,7 @@
         },
         {
             "name": "Languages",
-            "highlights": [{"name": "Java", "icon":"fab-java"}, {"name":"Javascript/Typescript", "icon":"fab-js"},{"name":"Python", "icon":"fab-python"}]
+            "highlights": [{"name": "Java", "icon":"fab-java"}, {"name":"Javascript/Typescript", "icon":"fab-js"},{"name":"Python", "icon":"fab-python"},{"name": "Dart", "icon": "fab-dart-lang"}]
         },
         {
             "name": "Frameworks",
