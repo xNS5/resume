@@ -69,7 +69,7 @@
         },
         {
             "name": "Frameworks",
-            "highlights": [{"name": "React.js", "icon": "fab-react"}, {"name": "Node.js", "icon": "fab-node"}, {"name": "Next.js", "icon": "fab-node-js"}, {"name": "Flutter", "icon": "fab-flutter"}, {"name": "Django", "icon": "fab-python"}, {"name": "Flask/FastAPI", "icon":"fas-flask" }]
+            "highlights": [{"name": "React.js", "icon": "fab-react"}, {"name": "Node.js", "icon": "fab-node"}, {"name": "Next.js", "icon": "fab-node-js"}, {"name": "Flutter", "icon": "fab-flutter"}, {"name": "Django", "icon": "fab-python"}, {"name": "Flask/FastAPI", "icon":"fas-flask" }, {"name": "Bash", "icon": "fas-terminal"}]
         }
     ],
     "projects": [
