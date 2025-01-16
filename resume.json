@@ -75,6 +75,7 @@
     "projects": [
         {
             "name": "Bellingham Rental Reviews",
+            "url": "https://github.com/xNS5/rentalreviews",
             "description":"A web application to display AI generated reviews of property management companies and apartment complexes in the Bellingham area.",
             "technologies": ["Next.js", "Typescript", "MongoDB", "Firebase", "Python", "Selenium"],
             "startDate": "February 2024",
@@ -88,6 +89,7 @@
         },
         {
             "name": "Accessibility Testing Automation Application",
+            "url":"https://github.com/xNS5/WWU-Accessibility-Engine",
             "description": "An accessibility evaluation application for an accessibility consulting company in Bellingham, WA.",
             "technologies":["Sails.js", "Vue.js", "Selenium", "Python", "Deque aXe API"],
             "startDate": "July 2021",
@@ -101,6 +103,7 @@
         },
         {
             "name": "Web Content Accessibility Guideline (WCAG) Reference CJS",
+            "url":"https://github.com/xNS5/wcag-reference-cjs",
             "description": "A reference library for WCAG success criterion.",
             "technologies": ["Javascript"],
             "startDate": "July 2021",
@@ -115,6 +118,7 @@
         {
             "name": "ReLeave",
             "description":"A habit tracking mobile application written in Flutter, designed to assist those going through substance use disorder recovery.",
+            "url":"https://github.com/xNS5/ReLeave",
             "technologies": ["Flutter", "Sqlite"],
             "startDate": "January 2021",
             "endDate": "March 2021",
