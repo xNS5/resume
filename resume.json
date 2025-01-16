@@ -61,15 +61,40 @@
     "skills": [
         {
             "name": "General Experience",
-            "highlights": [{"name": "Data Structures", "icon": "fas-laptop-code"}, {"name": "Algorithms", "icon": "fas-chart-diagram"}, {"name": "Databases (SQL and noSQL)", "icon": "fas-database" }, {"name": "Git", "icon": "fab-git-alt"}, {"name": "CI/CD", "icon": "fas-code-pull-request"}, {"name": "Docker", "icon": "fab-docker"}, {"name": "Maven", "icon": "fas-feather"}, {"name": "Azure", "icon":"fas-server"}, {"name": "SOAP", "icon": "fas-cloud"}, {"name": "REST", "icon":"fas-circle-nodes"}]
+            "highlights": [
+                {"name": "Data Structures", "icon": "fas-laptop-code", "alt":  "A laptop with a small code snippet displayed on its screen, representing coding or development"},
+                {"name": "Algorithms", "icon": "fas-chart-diagram", "alt":  "A stylized chart or diagram with connected nodes, symbolizing analytics, data flow, or process visualization"},
+                {"name": "Databases (SQL and noSQL)", "icon": "fas-database", "alt":  "A stack of cylindrical disks, representing a database or data storage"},
+                {"name": "Git", "icon": "fab-git-alt", "alt":  "The Git version control system logo, used for tracking changes in source code"},
+                {"name": "CI/CD", "icon": "fas-code-pull-request", "alt":  "A branching arrow with code brackets, symbolizing a pull request in version control workflows"},
+                {"name": "Docker", "icon": "fab-docker", "alt":  "The Docker logo featuring a whale with shipping containers stacked on its back, representing containerized applications"},
+                {"name": "Maven", "icon": "fas-feather", "alt":  "A single feather, often representing writing, creativity, or lightweight design"},
+                {"name": "Azure", "icon":"fas-server", "alt":  "A server rack with indicator lights, symbolizing web hosting, networking, or cloud computing"},
+                {"name": "SOAP", "icon": "fas-cloud", "alt":  "A simple cloud icon, representing cloud computing, storage, or weather-related concepts"},
+                {"name": "REST", "icon":"fas-circle-nodes", "alt":  "A central circle with multiple smaller connected nodes, symbolizing a network, decentralized systems, or data connections"}
+            ]
         },
         {
             "name": "Languages",
-            "highlights": [{"name": "Java", "icon":"fab-java"}, {"name":"Javascript/Typescript", "icon":"fab-js"},{"name":"Python", "icon":"fab-python"},{"name": "Dart", "icon": "fab-dart-lang"}, {"name": "Bash", "icon": "fas-terminal"}]
+            "highlights": [
+                {"name": "Java", "icon":"fab-java", "alt":  "The Java programming language logo, typically represented by a stylized coffee cup, symbolizing Java development"},
+                {"name":"Javascript/Typescript", "icon":"fab-js", "alt":  "The JavaScript logo, usually shown as the letters \"JS,\" representing the JavaScript programming language used for web development."},
+                {"name":"Python", "icon":"fab-python", "alt":  "The Python programming language logo, featuring two intertwined snakes forming a “P” shape, symbolizing Python development"},
+                {"name": "Dart", "icon": "fab-dart-lang", "alt":  "The Dart programming language logo, often represented by a stylized blue angular shape, symbolizing Dart and Flutter development"},
+                {"name": "Bash", "icon": "fas-terminal", "alt":  "A command-line terminal window with a blinking cursor or prompt, representing a shell, CLI, or coding environment"}
+            ]
         },
         {
             "name": "Frameworks",
-            "highlights": [{"name": "React.js", "icon": "fab-react"}, {"name": "Node.js", "icon": "fab-node"}, {"name": "Next.js", "icon": "fab-node-js"}, {"name": "Flutter", "icon": "fab-flutter"}, {"name": "Django", "icon": "fab-python"}, {"name": "Flask/FastAPI", "icon":"fas-flask" }, {"name": "Bash", "icon": "fas-terminal"}]
+            "highlights": [
+                {"name": "React.js", "icon": "fab-react", "alt":  "The React logo, featuring an atom-like structure with three elliptical orbits, representing the React JavaScript library for building user interfaces"},
+                {"name": "Node.js", "icon": "fab-node", "alt":  "The Node.js logo, often represented by the word \"Node\" in a hexagonal shape, symbolizing the JavaScript runtime for server-side applications"},
+                {"name": "Next.js", "icon": "fab-node-js", "alt":  "The Node.js logo, typically shown as “JS” inside a hexagon, representing the Node.js JavaScript runtime for backend development"},
+                {"name": "Flutter", "icon": "fab-flutter", "alt":  "The Flutter logo, a stylized blue \"F\" or layered geometric shape, symbolizing the Flutter framework for cross-platform app development"},
+                {"name": "Django", "icon": "fab-python", "alt":  " The Python programming language logo, featuring two intertwined snakes forming a \"P\" shape, symbolizing Python development."},
+                {"name": "Flask/FastAPI", "icon":"fas-flask", "alt":  "A laboratory flask tilted to one side, symbolizing experimentation, chemistry, or the Flask web framework in Python"},
+                {"name": "Bash", "icon": "fas-terminal", "alt":  "A command-line terminal window with a blinking cursor or prompt, representing a shell, CLI, or coding environment"}
+            ]
         }
     ],
     "projects": [
