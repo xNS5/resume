@@ -29,6 +29,6 @@ jobs:
 
     - name: Push to pages branch
       run: |
-          git add --force \*.pdf
+          git add --force \*.pdf \*.html
           git commit -m "$(git log -1 --pretty='%s')"
           git push $(git ls-remote --get-url origin) main:prod --force
