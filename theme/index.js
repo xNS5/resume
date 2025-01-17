@@ -78,7 +78,6 @@ exports.render = ({ basics, work, education, skills, projects }) => `
                 <div class="section-header">
                   <div class="header-1">
                   <h3>${project.name}</h3>
-                  ${project?.description ? `<p>${project.description}</p>` : ""}
                   ${project.technologies && `<p><i>${project.technologies.map((tech) => `${tech}`).join(", ")}</i></p>`}
                 </div>
                 <div class='header-2'>
