@@ -11,9 +11,9 @@ exports.render = ({ basics, work, education, skills, projects }) => `
   <div id="heading">
     <h1>${basics.name}</h1>
     <ol id="contact">
-      <li><a href="tel:${basics.phone}" aria-label=${basics.phone.replace("(", "").replace(")", "-").replace(" ", "")}>${basics.phone}</a></li>
-      <li><a href="mailto:${basics.email}">${basics.email}</a></li>
-      ${basics.profiles.map((profile) => `<li><a href="${profile.url}">${profile.display_name}</a></li>`).join("")}
+      <li><a href="tel:${basics.phone}" aria-label=${basics.phone.replace("(", "").replace(")", "-").replace(" ", "")}><p>${basics.phone}</p></a></li>
+      <li><a href="mailto:${basics.email}"><p>${basics.email}</p></a></li>
+      ${basics.profiles.map((profile) => `<li><a href="${profile.url}"><p>${profile.display_name}</p></a></li>`).join("")}
     </ol>
   </div>
   ${
