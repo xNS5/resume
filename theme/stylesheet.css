@@ -3,13 +3,13 @@
     margin: 0.25in;
     line-height: 1.5;
     
-  }
+}
 
 #resume {
-    body {
-        font-family: "Arial", sans-serif;
-        font-size: 12px;
-      }
+
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+
     
     h1 {
         font-size: 2.5em; 
