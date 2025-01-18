@@ -11,9 +11,9 @@ exports.render = ({ basics, work, education, skills, projects }) => `
   <div id="heading">
     <h1>${basics.name}</h1>
     <ol id="contact">
-      <li><a href="tel:${basics.phone}" aria-label=${basics.phone.replace("(", "").replace(")", "-").replace(" ", "")}>${basics.phone}</a></li>
-      <li><a href="mailto:${basics.email}">${basics.email}</a></li>
-      ${basics.profiles.map((profile) => `<li><a href="${profile.url}">${profile.display_name}</a></li>`).join("")}
+      <li><a href="tel:${basics.phone}" aria-label=${basics.phone.replace("(", "").replace(")", "-").replace(" ", "")}><p>${basics.phone}</p></a></li>
+      <li><a href="mailto:${basics.email}"><p>${basics.email}</p></a></li>
+      ${basics.profiles.map((profile) => `<li><a href="${profile.url}"><p>${profile.display_name}</p></a></li>`).join("")}
     </ol>
   </div>
   ${
@@ -61,7 +61,7 @@ exports.render = ({ basics, work, education, skills, projects }) => `
       <section id="technical-skills-section" class="main-section">
         <h2>TECHNICAL SKILLS</h2>
           <ol id="technical-skills-list">
-          ${skills.map((skill) => `<li><b>${skill.name}</b>: ${skill.highlights.join(", ")}</li>`).join("")}
+          ${skills.map((skill) => `<li><b>${skill.name}</b>: ${skill.highlights.map((hi) => hi.name).join(", ")}</li>`).join("")}
           </ol>
     </section>`
     }
@@ -78,7 +78,6 @@ exports.render = ({ basics, work, education, skills, projects }) => `
                 <div class="section-header">
                   <div class="header-1">
                   <h3>${project.name}</h3>
-                  ${project?.description ? `<p>${project.description}</p>` : ""}
                   ${project.technologies && `<p><i>${project.technologies.map((tech) => `${tech}`).join(", ")}</i></p>`}
                 </div>
                 <div class='header-2'>
