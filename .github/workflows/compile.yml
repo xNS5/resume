@@ -3,7 +3,7 @@ name: Compile JSON Resume and Push to GH Pages
 on:
   push:
     branches: ['main']
-    paths: ['resume.json']
+    paths: ['resume.json', 'theme/']
   workflow_dispatch:
 
 jobs:
