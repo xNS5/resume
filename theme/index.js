@@ -7,7 +7,7 @@ exports.render = ({ basics, work, education, skills, projects }) => `
     <title>${basics.name}</title>
   </head>
   <body>
-  <article>
+  <article id="resume">
   <div id="heading">
     <h1>${basics.name}</h1>
     <ol id="contact">
