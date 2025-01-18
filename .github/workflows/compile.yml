@@ -25,7 +25,7 @@ jobs:
     - name: Build Resume PDF
       run: |
         npm ci
-        npm run start-pdf
+        npm run start
 
     - name: Push to pages branch
       run: |
