@@ -81,7 +81,9 @@
                 {"name":"Javascript/Typescript", "icon":"fab-js", "alt":  "The JavaScript logo, usually shown as the letters \"JS,\" representing the JavaScript programming language used for web development."},
                 {"name":"Python", "icon":"fab-python", "alt":  "The Python programming language logo, featuring two intertwined snakes forming a “P” shape, symbolizing Python development"},
                 {"name": "Dart", "icon": "fab-dart-lang", "alt":  "The Dart programming language logo, often represented by a stylized blue angular shape, symbolizing Dart and Flutter development"},
-                {"name": "Bash", "icon": "fas-terminal", "alt":  "A command-line terminal window with a blinking cursor or prompt, representing a shell, CLI, or coding environment"}
+                {"name": "Bash", "icon": "fas-terminal", "alt":  "A command-line terminal window with a blinking cursor or prompt, representing a shell, CLI, or coding environment"},
+                {"name": "Powershell", "icon": "fas-terminal", "alt":  "A command-line terminal window with a blinking cursor or prompt, representing a shell, CLI, or coding environment"}
+
             ]
         },
         {
@@ -92,8 +94,7 @@
                 {"name": "Next.js", "icon": "fab-node-js", "alt":  "The Node.js logo, typically shown as “JS” inside a hexagon, representing the Node.js JavaScript runtime for backend development"},
                 {"name": "Flutter", "icon": "fab-flutter", "alt":  "The Flutter logo, a stylized blue \"F\" or layered geometric shape, symbolizing the Flutter framework for cross-platform app development"},
                 {"name": "Django", "icon": "fab-python", "alt":  " The Python programming language logo, featuring two intertwined snakes forming a \"P\" shape, symbolizing Python development."},
-                {"name": "Flask/FastAPI", "icon":"fas-flask", "alt":  "A laboratory flask tilted to one side, symbolizing experimentation, chemistry, or the Flask web framework in Python"},
-                {"name": "Bash", "icon": "fas-terminal", "alt":  "A command-line terminal window with a blinking cursor or prompt, representing a shell, CLI, or coding environment"}
+                {"name": "Flask/FastAPI", "icon":"fas-flask", "alt":  "A laboratory flask tilted to one side, symbolizing experimentation, chemistry, or the Flask web framework in Python"}
             ]
         }
     ],
