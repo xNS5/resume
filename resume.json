@@ -93,7 +93,6 @@
                 {"name": "Node.js", "icon": "fab-node", "alt":  "The Node.js logo, often represented by the word \"Node\" in a hexagonal shape, symbolizing the JavaScript runtime for server-side applications"},
                 {"name": "Next.js", "icon": "fab-node-js", "alt":  "The Node.js logo, typically shown as “JS” inside a hexagon, representing the Node.js JavaScript runtime for backend development"},
                 {"name": "Flutter", "icon": "fab-flutter", "alt":  "The Flutter logo, a stylized blue \"F\" or layered geometric shape, symbolizing the Flutter framework for cross-platform app development"},
-                {"name": "Django", "icon": "fab-python", "alt":  " The Python programming language logo, featuring two intertwined snakes forming a \"P\" shape, symbolizing Python development."},
                 {"name": "Flask/FastAPI", "icon":"fas-flask", "alt":  "A laboratory flask tilted to one side, symbolizing experimentation, chemistry, or the Flask web framework in Python"}
             ]
         }
