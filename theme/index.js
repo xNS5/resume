@@ -17,7 +17,7 @@ exports.render = ({ basics, work, education, skills, projects }) => `
     </ol>
   </div>
   ${
-    basics.summary &&
+    !basics.summary ?  "" :
     `
     <section id="summary-section" class="main-section">
       <h2>SUMMARY</h2>
@@ -26,7 +26,7 @@ exports.render = ({ basics, work, education, skills, projects }) => `
     `
   }
   ${
-    work &&
+    !work ? "" :
     `
     <section id="experience-section" class="main-section">
     <h2>EXPERIENCE</h2>
@@ -56,7 +56,7 @@ exports.render = ({ basics, work, education, skills, projects }) => `
     `
   }
     ${
-      skills &&
+      !skills ? "" :
       `    
       <section id="technical-skills-section" class="main-section">
         <h2>TECHNICAL SKILLS</h2>
@@ -66,7 +66,7 @@ exports.render = ({ basics, work, education, skills, projects }) => `
     </section>`
     }
     ${
-      projects &&
+      !projects ? "" :
       `
       <section id="projects-section" class="main-section">
         <h2>PROJECTS</h2>
@@ -94,7 +94,7 @@ exports.render = ({ basics, work, education, skills, projects }) => `
     </section>`
     }
    ${
-     education &&
+     !education ? "" : 
      ` 
     <section id="education-section" class="main-section">
     <h2>EDUCATION</h2>
