@@ -125,33 +125,6 @@
                 "Utilized Deque Labs aXe accessibility API and Selenium Webdriver to scan websites and test for over 350 Web Content Accessibility Guideline (WCAG) violations",
                 "Implemented REST API routes in the Sails.js backend and integrated a custom Python web crawler"
             ]
-        },
-        {
-            "name": "Web Content Accessibility Guideline (WCAG) Reference CJS",
-            "url":"https://github.com/xNS5/wcag-reference-cjs",
-            "description": "A reference library for WCAG success criterion.",
-            "technologies": ["Javascript"],
-            "startDate": "July 2021",
-            "endDate": "January 2022",
-            "highlights": [
-                "Forked and modified the NodeJS Package \"WCAG Reference\" to work as a CommonJS import",
-                "Created a function to locate and return all WCAG success criterion of a given level (A-AAA)",
-                "Upgraded the WCAG scrapers to include short and long descriptions of WCAG guidelines in the JSON output",
-                "Utilized Github Actions to deploy updates to Npmjs.com"
-            ]
-        },
-        {
-            "name": "ReLeave",
-            "description":"A habit tracking mobile application written in Flutter, designed to assist those going through substance use disorder recovery.",
-            "url":"https://github.com/xNS5/ReLeave",
-            "technologies": ["Flutter", "Sqlite"],
-            "startDate": "January 2021",
-            "endDate": "March 2021",
-            "highlights": [
-                "Led a team of 4 in the development of a cross-platform mobile application to assist people going through cannabis use disorder recovery",
-                "Conducted research, and interviewed Substance Use Disorder specialists with Sea-Mar Community Health Centers to develop a list of functional requirements",
-                "Integrated Reddit API using the Dart Reddit API Wrapper (DRAW) to interact with over 200,000 users on the /r/Leaves subreddit"
-            ]
-        }
+}
     ]
 }
