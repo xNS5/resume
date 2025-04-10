@@ -3,7 +3,6 @@
         "name": "Michael Kennedy",
         "email": "michael@michaelkennedy.dev",
         "phone": "(831) 917-9737",
-        "summary": "Tenacious and detail-oriented Software Engineer with experience in developing both front-end and back-end applications. Passionate about creating innovative, user-centric solutions. Renowned for excellent communication skills, building strong relationships with stakeholders, and advocating for accessible design. Highlights include developing a scalable PDF tracking solution, an intuitive user-friendly code review application, and an automated website accessibility evaluation utility. Committed to fostering a supportive culture of cross-team collaboration and professional excellence.",
         "profiles": [
             {
                 "network": "Linkedin",
@@ -78,6 +77,7 @@
             "name": "Languages",
             "highlights": [
                 {"name": "Java", "icon":"fab-java", "alt":  "The Java programming language logo, typically represented by a stylized coffee cup, symbolizing Java development"},
+                {"name": "Go", "icon":"fab-golang", "alt":  "Go programming language wordmark."},
                 {"name":"Javascript/Typescript", "icon":"fab-js", "alt":  "The JavaScript logo, usually shown as the letters \"JS,\" representing the JavaScript programming language used for web development."},
                 {"name":"Python", "icon":"fab-python", "alt":  "The Python programming language logo, featuring two intertwined snakes forming a “P” shape, symbolizing Python development"},
                 {"name": "Dart", "icon": "fab-dart-lang", "alt":  "The Dart programming language logo, often represented by a stylized blue angular shape, symbolizing Dart and Flutter development"},
